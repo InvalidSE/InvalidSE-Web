@@ -11,17 +11,17 @@
     onMount(() => {
         show_title = true
 
-        // start button animation after 1 second 
+        // start button box animation
         setTimeout(() => {
             show_button_container = true
 
-            // second button animation after 2 seconds
+            // button appear animation
             setTimeout(() => {
                 show_buttons = true
             }, 750)
+
         }, 500)
 
-        
     })
 </script>
 
@@ -50,6 +50,12 @@
 
 
 <style lang="scss">
+    
+    // Button animation delay variables
+    $nav-delay-inc: 0.3s;
+    $nav-button-count: 4;
+    $nav-total-delay: $nav-delay-inc * $nav-button-count;
+    
     .title-container {
         display: flex;
         margin: 0;
@@ -58,9 +64,7 @@
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(117, 19, 93, 0.73)), url("/blender-logo.png");
-        background-repeat: no-repeat;
-        background-position: center;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(117, 19, 93, 0.73)), url("/blender-logo.png") no-repeat center center fixed;
     }
     #username-container{
         display: flex;
@@ -94,26 +98,34 @@
         animation-duration: 1s;
     }
     .nav-button{
-        margin: 0 0.5rem;
-        padding: 1rem 1rem 0.75rem 1rem;
-        border-radius: 0.75rem;
+        margin: 0 1rem;
+        padding: 1rem 1rem 1rem 1rem;
+        border-radius: 0.5rem;
         background-color: rgba(0, 0, 0, 0.205);
         color: #D0D0D0;
         text-decoration: none;
         font-size: 1.5rem;
         font-weight: bold;
-        animation-name: fade_in;
-        animation-duration: 4s;
-        border-bottom: 5px solid #D0D0D0;
+        opacity: 0;
+        animation: fly_up $nav-total-delay forwards;
+        border: 3px solid #D0D0D0;
         box-shadow: 0 0 10px #d0d0d077;
         transition: transform 0.5s, background-color 0.5s, box-shadow 0.5s, border-bottom 0.5s;
+    }
+    // Delayed animations for each of the buttons
+    $delay: $nav-total-delay;
+    @for $i from ($nav-button-count + 1) to 1 {
+        .nav-button:nth-child(#{$i}) {
+        animation-delay: $delay;
+        }
+
+        $delay: $delay - $nav-delay-inc;
     }
     .nav-button:hover{
         transform: scale(1.1);
         background-color: rgba(0, 0, 0, 0.5);
         box-shadow: 0 0 10px #d0d0d0;
-        border-bottom: 5px solid #d0d0d0;
-        
+        // border-bottom: 5px solid #d0d0d0;
     }
     @keyframes underline_animation {
         0%   {width: 0px;}
@@ -122,6 +134,10 @@
     @keyframes fade_in {
         0%   {opacity: 0;}
         100% {opacity: 1;}
+    }
+    @keyframes fly_up {
+        0%   {opacity: 0; transform: translateY(0) scale(1.1);}
+        100% {opacity: 1; transform: translateY(0) scale(1);}
     }
     @keyframes size_in {
         0%   {width: 0px; height: 0px; margin-top: 0rem;}
