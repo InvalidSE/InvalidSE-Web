@@ -18,7 +18,7 @@
             // button appear animation
             setTimeout(() => {
                 show_buttons = true
-            }, 750)
+            }, 500)
 
         }, 500)
 
@@ -52,7 +52,7 @@
 <style lang="scss">
     
     // Button animation delay variables
-    $nav-delay-inc: 0.3s;
+    $nav-delay-inc: 0.2s;
     $nav-button-count: 4;
     $nav-total-delay: $nav-delay-inc * $nav-button-count;
     
@@ -72,7 +72,7 @@
         align-items: left;
         justify-content: center;
         animation-name: fade_in;
-        animation-duration: 4s;
+        animation-duration: 2s;
     }
     .name-underline{
         width: 250px;
@@ -81,11 +81,11 @@
         box-shadow: 0 0 10px #d0d0d077;
         margin: 0;
         animation-name: underline_animation;
-        animation-duration: 2s;
+        animation-duration: 1s;
     }
     #name {
         animation-name: fade_in;
-        animation-duration: 4s;
+        animation-duration: 2s;
     }
     #button-container{
         display: flex;
