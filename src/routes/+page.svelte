@@ -1,6 +1,7 @@
 <svelte:head>
     <title>Taine Reader</title>
 </svelte:head>
+
 <script lang="ts">
     import { onMount } from 'svelte'
 
