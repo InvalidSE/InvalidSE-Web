@@ -25,15 +25,19 @@
     })
 </script>
 
+
+
 <div class="title-container">
+
     {#if show_title}
-    <h1 id="name">Taine Reader</h1>
-    <div id="username-container">
-        <div class="name-underline"/>
-        <h2 id="username">Invalid<i>SE</i></h2>
-        <div class="name-underline"/>
-    </div>
+        <h1 id="name">Taine Reader</h1>
+        <div id="username-container">
+            <div class="name-underline"/>
+            <h2 id="username">Invalid<i>SE</i></h2>
+            <div class="name-underline"/>
+        </div>
     {/if}
+
     {#if show_button_container}
         <div id="button-container">
             {#if show_buttons}
@@ -44,8 +48,8 @@
             {/if}
         </div>
     {/if}
-</div>
 
+</div>
 
 
 
@@ -55,7 +59,7 @@
     $nav-delay-inc: 0.2s;
     $nav-button-count: 4;
     $nav-total-delay: $nav-delay-inc * $nav-button-count;
-    
+
     .title-container {
         display: flex;
         margin: 0;
@@ -84,22 +88,20 @@
         animation-duration: 1s;
     }
     #name {
-        animation-name: fade_in;
-        animation-duration: 2s;
+        animation: fade_in 2s;
     }
     #button-container{
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        animation-name: size_in;
+        animation: size_in 1s;
         margin-top: 2rem;
         height: 4rem;
-        animation-duration: 1s;
     }
     .nav-button{
         margin: 0 1rem;
-        padding: 1rem 1rem 1rem 1rem;
+        padding: 1rem;
         border-radius: 0.5rem;
         background-color: rgba(0, 0, 0, 0.205);
         color: #D0D0D0;
@@ -111,22 +113,24 @@
         border: 3px solid #D0D0D0;
         box-shadow: 0 0 10px #d0d0d077;
         transition: transform 0.5s, background-color 0.5s, box-shadow 0.5s, border-bottom 0.5s;
+
+        &:hover{
+            transform: scale(1.1);
+            background-color: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 10px #d0d0d0;
+        }
     }
+
     // Delayed animations for each of the buttons
     $delay: $nav-total-delay;
     @for $i from ($nav-button-count + 1) to 1 {
         .nav-button:nth-child(#{$i}) {
-        animation-delay: $delay;
+            animation-delay: $delay;
         }
-
         $delay: $delay - $nav-delay-inc;
     }
-    .nav-button:hover{
-        transform: scale(1.1);
-        background-color: rgba(0, 0, 0, 0.5);
-        box-shadow: 0 0 10px #d0d0d0;
-        // border-bottom: 5px solid #d0d0d0;
-    }
+    
+    // Animation definitions
     @keyframes underline_animation {
         0%   {width: 0px;}
         100% {width: 250px;}
