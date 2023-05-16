@@ -79,17 +79,21 @@
         animation-name: fade_in;
         animation-duration: 2s;
     }
+    #username {
+        text-shadow: 0 0 10px #18181877;
+    }   
     .name-underline{
         width: 250px;
         height: 12px;
         background-color: #D0D0D0;
-        box-shadow: 0 0 10px #d0d0d077;
+        box-shadow: 0 0 10px #18181877;
         margin: 0;
         animation-name: underline_animation;
         animation-duration: 1s;
     }
     #name {
         animation: fade_in 2s;
+        text-shadow: 0 0 10px #18181877;
     }
     #button-container{
         display: flex;
@@ -105,20 +109,18 @@
         padding: 1rem;
         border-radius: 0.5rem;
         background-color: rgba(0, 0, 0, 0.205);
-        color: #D0D0D0;
         text-decoration: none;
         font-size: 1.5rem;
         font-weight: bold;
         opacity: 0;
         animation: fly_up $nav-total-delay forwards;
         border: 3px solid #D0D0D0;
-        box-shadow: 0 0 10px #d0d0d077;
+        box-shadow: 0 0 10px #18181877;
         transition: transform 0.5s, background-color 0.5s, box-shadow 0.5s, border-bottom 0.5s;
 
         &:hover{
-            transform: scale(1.1);
             background-color: rgba(0, 0, 0, 0.5);
-            box-shadow: 0 0 10px #d0d0d0;
+            box-shadow: 0 0 10px rgb(88, 88, 88);
         }
     }
 

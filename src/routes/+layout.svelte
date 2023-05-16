@@ -1,5 +1,5 @@
 <script lang="ts">
-    import '../lib/global_style.svelte'
+    import '../lib/global.scss'
 </script>
 
 <slot />

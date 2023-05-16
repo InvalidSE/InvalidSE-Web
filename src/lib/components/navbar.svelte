@@ -17,25 +17,29 @@
 <style lang="scss">
 
     #navbar{
-        background-color: #121212;
+        background-color: #6388d85d;
         width: 100%;
         display: flex;
         flex-direction: row;
+        box-shadow: 0 0 20px #000000d2;
+        transform: translateY(-5px);
     }
     
     .nav-item{
-        color: #D0D0D0;
         font-size: 1.5rem;
         font-family: Roboto;
         font-weight: bold;
         text-decoration: none;
         padding: 1rem;
         cursor: pointer;
-        transition: 0.25s;
+        transition: 0.5s;
+        border-top: 5px solid transparent;
         &:hover{
-            color: #D0D0D0;
-            background-color: #212121;
+            background-color: #6388d89d;
+            border-top: 5px solid #6388d8;
+            transform: translateY(5px);
         }
+        
     }
 
     .nav-image{
@@ -43,9 +47,9 @@
         height: 29px;
         
         // center vertically
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
+        // position: relative;
+        // top: 50%;
+        // transform: translateY(-50%);
     }
 
     .spacer{
