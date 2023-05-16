@@ -10,8 +10,8 @@
 
     <div class="spacer"/> <!-- Spacer -->
 
-    <a class="nav-item" href="https://github.com/InvalidSE/" id="github">GITHUB</a>
-    <a class="nav-item" href="https://discord.gg/8QXQZ2Z" id="discord">DISCORD</a>
+    <a class="nav-item" href="https://github.com/InvalidSE/" id="github"><img class='nav-image' src='/github.svg' alt="github" /></a>
+    <!-- <a class="nav-item" href="https://discord.gg/8QXQZ2Z" id="discord">DISCORD</a> -->
 </div>
 
 <style lang="scss">
@@ -24,7 +24,7 @@
     }
     
     .nav-item{
-        color: white;
+        color: #D0D0D0;
         font-size: 1.5rem;
         font-family: Roboto;
         font-weight: bold;
@@ -36,6 +36,16 @@
             color: #D0D0D0;
             background-color: #212121;
         }
+    }
+
+    .nav-image{
+        padding: 0;
+        height: 29px;
+        
+        // center vertically
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .spacer{
