@@ -17,12 +17,12 @@
 <style lang="scss">
 
     #navbar{
-        background-color: #6388d85d;
+        // background-color: #6388d85d;
         width: 100%;
         display: flex;
         flex-direction: row;
         box-shadow: 0 0 20px #000000d2;
-        transform: translateY(-5px);
+        // transform: translateY(-5px);
     }
     
     .nav-item{
@@ -32,12 +32,13 @@
         text-decoration: none;
         padding: 1rem;
         cursor: pointer;
+        transition: background-color 0s;
         transition: 0.5s;
-        border-top: 5px solid transparent;
+        // border-top: 5px solid transparent;
         &:hover{
-            background-color: #6388d89d;
-            border-top: 5px solid #6388d8;
-            transform: translateY(5px);
+            // border-top: 5px solid #6388d8;
+            transform: translateY(-3px);
+            text-shadow: 0 0 10px #181818b4;
         }
         
     }
