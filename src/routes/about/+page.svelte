@@ -12,9 +12,7 @@
     </div>
     <div class="left-panel"></div>
     <div class="content">
-        
-        <div></div>
-
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora magnam earum quaerat repellat soluta perferendis est! Dolorum ea quasi nulla excepturi optio mollitia provident earum. Alias aliquid nihil praesentium ad?</p>
     </div>
     <div class="right-panel"></div>
 </div>
@@ -46,6 +44,7 @@
         align-items: center;
         background-color: #181818;
         height: 100%;
+        text-align: center;
     }
 
     .right-panel { 
@@ -54,7 +53,6 @@
 
     #heading {
         text-align: center;
-        margin-top: 1em;
-        margin-bottom: 1em;
+        margin: 2em 0em;
     }
 </style>
