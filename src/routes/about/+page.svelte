@@ -12,7 +12,13 @@
     </div>
     <div class="left-panel"></div>
     <div class="content">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora magnam earum quaerat repellat soluta perferendis est! Dolorum ea quasi nulla excepturi optio mollitia provident earum. Alias aliquid nihil praesentium ad?</p>
+        <div class="about-boxes">
+            <div class="about-box"><p>A</p></div>
+            <div class="about-box"><p>A</p></div>
+            <div class="about-box"><p>A</p></div>
+            <div class="about-box"><p>A</p></div>
+
+        </div>
     </div>
     <div class="right-panel"></div>
 </div>
@@ -54,5 +60,27 @@
     #heading {
         text-align: center;
         margin: 2em 0em;
+    }
+
+    .about-boxes {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+    .about-box {
+        cursor: pointer;
+        opacity: 1;
+        transform: scale(1);
+        transition: 0.25s;
+        margin: 8px;
+        padding: 8px;
+        border: 2px solid #252d4d;
+        background-color: rgba(48, 60, 101, 0.8);
+        border-radius: 5px;
+        flex-grow: 1;
+        box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.059), 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.085),
+            12.5px 12.5px 10px rgba(0, 0, 0, 0.105), 22.3px 22.3px 17.9px rgba(0, 0, 0, 0.125),
+            41.8px 41.8px 33.4px rgba(0, 0, 0, 0.151), 100px 100px 80px rgba(0, 0, 0, 0.21);
     }
 </style>

@@ -36,9 +36,7 @@
         transition: 0.5s;
         // border-top: 5px solid transparent;
         &:hover{
-            // border-top: 5px solid #6388d8;
-            transform: translateY(-3px);
-            text-shadow: 0 0 10px #181818b4;
+            background-color: #000000d2;
         }
         
     }
