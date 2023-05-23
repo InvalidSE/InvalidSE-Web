@@ -66,6 +66,8 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        width: 100%;
+
 
     }
     .about-box {
@@ -79,8 +81,6 @@
         background-color: rgba(48, 60, 101, 0.8);
         border-radius: 5px;
         flex-grow: 1;
-        box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.059), 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.085),
-            12.5px 12.5px 10px rgba(0, 0, 0, 0.105), 22.3px 22.3px 17.9px rgba(0, 0, 0, 0.125),
-            41.8px 41.8px 33.4px rgba(0, 0, 0, 0.151), 100px 100px 80px rgba(0, 0, 0, 0.21);
     }
+
 </style>
