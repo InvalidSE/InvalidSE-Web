@@ -48,7 +48,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: #181818;
         height: 100%;
         text-align: center;
     }
@@ -68,7 +67,6 @@
         flex-wrap: wrap;
         width: 100%;
 
-
     }
     .about-box {
         cursor: pointer;
@@ -77,8 +75,8 @@
         transition: 0.25s;
         margin: 8px;
         padding: 8px;
-        border: 2px solid #252d4d;
-        background-color: rgba(48, 60, 101, 0.8);
+        background-color: #181818;
+        border: rgba(123, 44, 187, 0.541) solid 2px;
         border-radius: 5px;
         flex-grow: 1;
     }
