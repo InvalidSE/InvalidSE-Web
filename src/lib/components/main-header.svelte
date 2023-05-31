@@ -66,14 +66,14 @@
 
     @media screen and (max-width: 995px) {
         #name {
-            font-size: 6rem;
+            font-size: 3rem;
             // display: none;
         }
         #username {
             font-size: 4rem;
         }
         .name-underline {
-            // width: ;
+            display: none;
         }
     }
     
