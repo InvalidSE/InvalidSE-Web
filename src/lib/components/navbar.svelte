@@ -11,7 +11,7 @@
     <div class="spacer"/> <!-- Spacer -->
 
     <a class="nav-item" href="https://github.com/InvalidSE/" id="github"><img class='nav-image' src='/github.svg' alt="github" /></a>
-    <!-- <a class="nav-item" href="https://discord.gg/8QXQZ2Z" id="discord">DISCORD</a> -->
+    <!-- <a class="nav-item" href="https://discord.gg/ashdkaskjdhaskjdh" id="discord">DISCORD</a> -->
 </div>
 
 <style lang="scss">
