@@ -92,6 +92,7 @@
             margin-top: 2rem;
             height: 10rem;
             animation: none;
+            width: 50%;
         }
         .nav-button{
             margin: 0.5rem 0;
