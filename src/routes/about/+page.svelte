@@ -13,7 +13,10 @@
     <div class="left-panel"></div>
     <div class="content">
         <div class="about-boxes">
-            <div class="history"><p>A</p></div>
+            <div class="history">
+                <h3>HISTORY</h3>
+                <p>I am from Northland, New Zealand, and am currently in my final high school year. I got into actual programming originally in my first year of high school because of science fair, and have been learning ever since.</p>
+            </div>
             <div class="interests"><p>A</p></div>
             <div class="projects"><p>A</p></div>
             <div class="technology"><p>A</p></div>
@@ -60,14 +63,13 @@
     }
 
     .about-boxes div {
-        transform: scale(1);
         transition: 0.25s;
         margin: 8px;
-        padding: 8px;
+        padding: 8px 30px;
+        text-align: justify;
         background-color: #181818;
-        border: rgba(123, 44, 187, 0.541) solid 2px;
+        // border: rgba(123, 44, 187, 0.541) solid 2px;
         border-radius: 5px;
-        text-align: center;
     }
 
     .history{
