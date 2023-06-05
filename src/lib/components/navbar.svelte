@@ -3,14 +3,17 @@
 </script>
 
 <div id="navbar">
-    <a class="nav-item" href="/" id="home">HOME</a>
-    <a class="nav-item" href="/about" id="about">ABOUT</a>
-    <a class="nav-item" href="/contact" id="contact">CONTACT</a>
-    <a class="nav-item" href="/projects" id="projects">PROJECTS</a>
+
+    <a class="nav-item mobile-show" href="/" id="home">BACK</a>
+
+    <a class="nav-item mobile-hide" href="/" id="home">HOME</a>
+    <a class="nav-item mobile-hide" href="/about" id="about">ABOUT</a>
+    <a class="nav-item mobile-hide" href="/contact" id="contact">CONTACT</a>
+    <a class="nav-item mobile-hide" href="/projects" id="projects">PROJECTS</a>
 
     <div class="spacer"/> <!-- Spacer -->
 
-    <a class="nav-item" href="https://github.com/InvalidSE/" id="github"><img class='nav-image' src='/github.svg' alt="github" /></a>
+    <a class="nav-item" href="https://github.com/InvalidSE/" id="github" target="_blank"><img class='nav-image' src='/github.svg' alt="github" /></a>
     <!-- <a class="nav-item" href="https://discord.gg/ashdkaskjdhaskjdh" id="discord">DISCORD</a> -->
 </div>
 
@@ -56,4 +59,17 @@
         width: 0;
     }
 
+    .mobile-show {
+        display: none;
+    }
+
+    // Media queries
+    @media screen and (max-width: 600px){
+        .mobile-hide{
+            display: none;
+        }
+        .mobile-show{
+            display: block;
+        }
+    }
 </style>
