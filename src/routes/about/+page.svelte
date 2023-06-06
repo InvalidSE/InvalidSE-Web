@@ -30,7 +30,20 @@
                     <div class="projects-link"><a href="https://github.com/InvalidSE" target="_blank">GitHub</a></div>
                 </div>
             </div>
-            <div class="technology"><p>A</p></div>
+            <div class="technology">
+                <h3>TECHNOLOGY</h3>
+                <p>These are the technologies I have experience in, and or like using: </p>
+                <ul>
+                    <li>Svelte & SvelteKit</li>
+                    <li>HTML5</li>
+                    <li>CSS & Sass</li>
+                    <li>Python</li>
+                    <li>(Learning) Rust</li>
+                    <li>Typescript and Javascript</li>
+                    <li>NodeJS</li>
+                    <li>Arduino</li>
+                </ul>
+            </div>
 
         </div>
     </div>
