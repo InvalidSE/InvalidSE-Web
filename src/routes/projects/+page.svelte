@@ -130,6 +130,10 @@
         }
     }
 
+    .content {
+        padding-top: 8px;
+    }
+
     // Media Queries
     @media only screen and (max-width: 1200px) {
         .grid-container {
