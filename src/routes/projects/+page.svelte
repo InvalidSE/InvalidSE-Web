@@ -17,13 +17,15 @@
 
             <div class="needy-appliances">
                 <h3>Needy Appliances</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis officiis qui necessitatibus delectus ratione excepturi minus ipsa sint perspiciatis explicabo maxime expedita sed, provident, aperiam nulla eligendi at corporis earum.</p>
             </div>
             <div class="reptile-monitor">
                 <h3>Reptile Monitor</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus voluptatem, aliquam magnam obcaecati veniam maiores sapiente earum, enim libero eius dolorem id exercitationem quam dolores optio velit amet? Optio, blanditiis.</p>
             </div>
             <div class="dirtywatts">
                 <h3>DIRTYWATTS</h3>
-                <p>DirtyWatts was a project me and the Questionable Research Labs team. </p>
+                <p>DirtyWatts was a project me and the Questionable Research Labs team. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, quidem ab. Recusandae laudantium quibusdam error ex, atque cum, porro voluptate cupiditate sunt nesciunt id! Dolores saepe deserunt suscipit nam voluptatibus?</p>
                 <div class="buttons-box">
                     <a class="projects-link" href="/projects/dirtywatts">More Details</a>
                     <a class="projects-link" href="https://github.com/questionable-research-labs/DirtyWatts" target="_blank">GitHub</a>
@@ -81,7 +83,7 @@
         grid-auto-rows: auto;
     }
 
-    .project-boxes div {
+    .project-boxes > div {
         transition: 0.25s;
         margin: 8px;
         padding: 8px 30px 30px 30px;
@@ -89,6 +91,15 @@
         background-color: #181818;
         // border: rgba(123, 44, 187, 0.541) solid 2px;
         border-radius: 5px;
+        border: #181818 solid 2px;
+
+        &:hover {
+            border: #2d2d2d solid 2px;
+            transform: scale(1.05);
+
+            // tilt forward effect
+            transform: perspective(500px) rotateX(5deg);
+        }
     }
 
     .needy-appliances{

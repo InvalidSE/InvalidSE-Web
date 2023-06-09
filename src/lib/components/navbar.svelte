@@ -61,7 +61,7 @@
 
     .mobile-show {
         display: none;
-    }
+    }   
 
     // Media queries
     @media screen and (max-width: 600px){

@@ -86,7 +86,7 @@
         grid-auto-rows: auto;
     }
 
-    .about-boxes div {
+    .about-boxes > div {
         transition: 0.25s;
         margin: 8px;
         padding: 8px 30px 30px 30px;
@@ -94,6 +94,15 @@
         background-color: #181818;
         // border: rgba(123, 44, 187, 0.541) solid 2px;
         border-radius: 5px;
+        border: #181818 solid 2px;
+
+        &:hover {
+            border: #2d2d2d solid 2px;
+            transform: scale(1.05);
+
+            // tilt forward effect
+            transform: perspective(500px) rotateX(5deg);
+        }
     }
 
     .history{
