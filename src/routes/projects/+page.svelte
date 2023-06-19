@@ -3,11 +3,13 @@
 </svelte:head>
 
 <script lang="ts">
-
+    import '../../lib/global.scss'
+    import Navbar from '../../lib/components/navbar.svelte'
 </script>
 
 <div class="grid-container">
     <div class="header-panel">
+        <Navbar />
         <h2 id="heading">Projects</h2>
     </div>
     <div class="left-panel"></div>
