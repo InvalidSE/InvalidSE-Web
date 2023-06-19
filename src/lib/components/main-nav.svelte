@@ -25,7 +25,7 @@
         <a id="about" class="nav-button" href="/about">ABOUT</a>
         <a id="contact" class="nav-button" href="/contact">CONTACT</a>
         <a id="projects" class="nav-button" href="/projects">PROJECTS</a>
-        <a id="blog" class="nav-button" href="/blog">BLOG</a>
+        <a id="blog" class="nav-button" target="_blank" href="https://github.com/invalidse">GITHUB</a>
     {/if}
 </div>
 
@@ -54,13 +54,13 @@
         font-weight: bold;
         opacity: 0;
         animation: fly_up $nav-total-delay forwards;
-        border: 3px solid #D0D0D0;
-        box-shadow: 0 0 10px #18181877;
-        transition: transform 0.5s, background-color 0.5s, box-shadow 0.5s, border-bottom 0.5s;
+        border: 1px solid #D0D0D0;
+        // box-shadow: 0 0 10px #18181877;
+        transition: 0.4s;
 
         &:hover{
-            background-color: rgba(0, 0, 0, 0.5);
-            // box-shadow: 0 0 10px rgb(88, 88, 88);
+            background-color: #D0D0D0;
+            color:rgba(0, 0, 0, 1)
         }
     }
 

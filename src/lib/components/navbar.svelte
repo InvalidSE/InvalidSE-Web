@@ -2,7 +2,7 @@
 
 </script>
 
-<div id="navbar">
+<div id="navbar">   
 
     <a class="nav-item mobile-show" href="/" id="home">BACK</a>
 
@@ -24,7 +24,7 @@
         width: 100%;
         display: flex;
         flex-direction: row;
-        box-shadow: 0 0 20px #000000d2;
+        // box-shadow: 0 0 20px #000000d2;
         // transform: translateY(-5px);
     }
     
