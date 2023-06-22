@@ -47,9 +47,7 @@
                     <li>Arduino</li>
                 </ul>
                 </div>
-                <div>
-                    <img src="/logos.png" alt="software">
-                </div>
+                <img src="/logos.png" alt="software">
             </div>
 
         </div>
@@ -129,12 +127,9 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-
-        div {
-            width: 50%;
-        }
         img {
             width: 100%;
+            max-width: 300px;
         }
     }
 

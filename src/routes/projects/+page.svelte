@@ -19,19 +19,23 @@
 
             <div class="needy-appliances">
                 <h3>Needy Appliances</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis officiis qui necessitatibus delectus ratione excepturi minus ipsa sint perspiciatis explicabo maxime expedita sed, provident, aperiam nulla eligendi at corporis earum.</p>
+                <p>For a competition called the Terrible Ideas Hackathon, me and QRL created needy kitchen appliances. Imagine, far in the future, we have optimised appliances for the best user experience ever. We removed the buttons of a microwave, and replaced it with a 'mind' using GPT-4 and speech recognition. We also made a smart toaster, a knife block that runs away, and a pot that actually never boils when it's watched.</p>
+                <div class="buttons-box">
+                    <a class="projects-link" href="https://terriblehack.nz/" target="_blank" rel="noreferrer">TerribleHack</a>
+                    <a class="projects-link" href="https://github.com/questionable-research-labs/needy-appliances" target="_blank" rel="noreferrer">GitHub</a>
+                </div>
             </div>
             <div class="reptile-monitor">
                 <h3>Reptile Monitor</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus voluptatem, aliquam magnam obcaecati veniam maiores sapiente earum, enim libero eius dolorem id exercitationem quam dolores optio velit amet? Optio, blanditiis.</p>
             </div>
             <div class="dirtywatts">
-                <h3>DIRTYWATTS</h3>
+                <h3>DirtyWatts</h3>
                 <p>DirtyWatts was a project me and the Questionable Research Labs team. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, quidem ab. Recusandae laudantium quibusdam error ex, atque cum, porro voluptate cupiditate sunt nesciunt id! Dolores saepe deserunt suscipit nam voluptatibus?</p>
                 <div class="buttons-box">
                     <a class="projects-link" href="/projects/dirtywatts">More Details</a>
-                    <a class="projects-link" href="https://github.com/questionable-research-labs/DirtyWatts" target="_blank">GitHub</a>
-                    <a class="projects-link" href="https://dirtywatts.nz/" target="_blank">Website</a>
+                    <a class="projects-link" href="https://github.com/questionable-research-labs/DirtyWatts" target="_blank" rel="noreferrer">GitHub</a>
+                    <a class="projects-link" href="https://dirtywatts.nz/" target="_blank" rel="noreferrer">Website</a>
                 </div>
             </div>
 
@@ -40,7 +44,7 @@
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi aliquid incidunt est minus atque id sapiente similique omnis adipisci laudantium ab dolorem, cupiditate doloribus itaque aut! Atque nulla doloremque quis?</p>
                 <div class="buttons-box">
                     <a class="projects-link" href="/projects/questionable-quote-app">More Details</a>
-                    <a class="projects-link" href="https://quotes.laspruca.nz" target="_blank">Website</a>
+                    <a class="projects-link" href="https://quotes.laspruca.nz" target="_blank" rel="noreferrer">Website</a>
                 </div>
             </div>            
 
@@ -123,8 +127,8 @@
     .buttons-box {
         display: flex;
         justify-content: left;
-        padding: 0 !important;
-        margin: 0 !important;
+        padding: 0;
+        margin: 0;
         gap: 10px;
 
         .projects-link {
