@@ -29,10 +29,11 @@
                 <p>Some projects I have done in the past include DirtyWatts with the Questionable Research Labs team, the Questionable Quote App, Needy Appliances, this website and more. Check out the more extensive list here: </p>
                 <div class="buttons-box">
                     <div class="projects-link"><a href="/projects">Projects</a></div>
-                    <div class="projects-link"><a href="https://github.com/InvalidSE" target="_blank">GitHub</a></div>
+                    <div class="projects-link"><a href="https://github.com/InvalidSE" target="_blank" rel="noreferrer">GitHub</a></div>
                 </div>
             </div>
             <div class="technology">
+                <div>
                 <h3>TECHNOLOGY</h3>
                 <p>These are the technologies I have experience in, and or like using: </p>
                 <ul>
@@ -45,6 +46,10 @@
                     <li>NodeJS</li>
                     <li>Arduino</li>
                 </ul>
+                </div>
+                <div>
+                    <img src="/logos.png" alt="software">
+                </div>
             </div>
 
         </div>
@@ -121,6 +126,16 @@
 
     .technology{
         grid-area: 3 / 1 / 4 / 3;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        div {
+            width: 50%;
+        }
+        img {
+            width: 100%;
+        }
     }
 
     .buttons-box {
@@ -195,6 +210,16 @@
 
         .technology{
             grid-area: 4 / 1 / 4 / 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            div {
+                width: 100%;
+            }
+            img {
+                display: none;
+            }
         }
     }
 </style>
