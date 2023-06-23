@@ -27,7 +27,7 @@
             </div>
             <div class="reptile-monitor">
                 <h3>Reptile Monitor</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus voluptatem, aliquam magnam obcaecati veniam maiores sapiente earum, enim libero eius dolorem id exercitationem quam dolores optio velit amet? Optio, blanditiis.</p>
+                <p>In 2019, I made a enclosure monitor for my friend's bearded dragon for science fair.</p>
             </div>
             <div class="dirtywatts">
                 <h3>DirtyWatts</h3>
