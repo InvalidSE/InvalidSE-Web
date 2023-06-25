@@ -27,11 +27,11 @@
             </div>
             <div class="reptile-monitor">
                 <h3>Reptile Monitor</h3>
-                <p>In 2019, I made a enclosure monitor for my friend's bearded dragon for science fair.</p>
+                <p>In 2019, I made a enclosure monitor for my friend's bearded dragon for science fair. It alerted you if the temperature got too hot or cold via email.<br><br> For this, we won the Best Overall Technology at the Central Northalnd Science Fair, the technology award and exibit award for year 9, and the NorthTec Innovation and Enterprise Award.</p>
             </div>
             <div class="dirtywatts">
                 <h3>DirtyWatts</h3>
-                <p>DirtyWatts was a project me and the Questionable Research Labs team. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, quidem ab. Recusandae laudantium quibusdam error ex, atque cum, porro voluptate cupiditate sunt nesciunt id! Dolores saepe deserunt suscipit nam voluptatibus?</p>
+                <p>DirtyWatts was a project me and the Questionable Research Labs team. We created a service to display the live data of power consumption and generation via different methods across New Zealand. We also made some physical indicatiors such as a colour changing lamp, and a smart socket which turns off when coal is being used.</p>
                 <div class="buttons-box">
                     <a class="projects-link" href="/projects/dirtywatts">More Details</a>
                     <a class="projects-link" href="https://github.com/questionable-research-labs/DirtyWatts" target="_blank" rel="noreferrer">GitHub</a>
@@ -41,9 +41,8 @@
 
             <div class="questionable-quote-app">
                 <h3>Questionable Quote App</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi aliquid incidunt est minus atque id sapiente similique omnis adipisci laudantium ab dolorem, cupiditate doloribus itaque aut! Atque nulla doloremque quis?</p>
+                <p>For saving your friend's out of context quotes. Originally we had this in a Google keep note, but I decided to make it better. It features creating different books, adding and deleting quotes, and sharing to other users. You can check it out via the button below.</p>
                 <div class="buttons-box">
-                    <a class="projects-link" href="/projects/questionable-quote-app">More Details</a>
                     <a class="projects-link" href="https://quotes.laspruca.nz" target="_blank" rel="noreferrer">Website</a>
                 </div>
             </div>            
