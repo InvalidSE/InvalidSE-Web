@@ -47,7 +47,7 @@
                     <li>Arduino</li>
                 </ul>
                 </div>
-                <img src="/logos.png" alt="software">
+                <img src="/logos.webp" alt="software">
             </div>
 
         </div>
