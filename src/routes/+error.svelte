@@ -17,7 +17,7 @@
         align-items: center;
         justify-content: center;
         height: 100vh;
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.726), rgba(123, 44, 187, 0.541)), url("/blender-logo.png") no-repeat center center fixed;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.726), rgba(123, 44, 187, 0.541)), url("/logo-render.webp") no-repeat center center fixed;
     }
     .text {
         display: flex;

@@ -65,7 +65,7 @@
     .header-panel {
         grid-area: 1 / 1 / 2 / 4;
         align-items: center;
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.726), rgba(123, 44, 187, 0.541)), url("/code.png") no-repeat top center fixed;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.726), rgba(123, 44, 187, 0.541)), url("/code.webp") no-repeat top center fixed;
     }
 
     .left-panel {
