@@ -1,7 +1,3 @@
-<script lang="ts">
-    
-</script>
-
 <h1 id="name">Taine Reader</h1>
 <div id="username-container">
     <div class="name-underline"/>
@@ -21,6 +17,8 @@
     #username {
         text-shadow: 0 0 10px #18181877;
     }   
+
+    // Underline animation
     .name-underline{
         width: 250px;
         height: 12px;
@@ -46,7 +44,6 @@
         100% {opacity: 1;}
     }
 
-
     @media screen and (max-width: 1000px) {
         #name {
             font-size: 6rem;
@@ -59,7 +56,6 @@
             display: none;
         }
     }
-
 
     // Media queries
     @media screen and (max-width: 700px) {

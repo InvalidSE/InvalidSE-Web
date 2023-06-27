@@ -11,21 +11,18 @@
     <a class="nav-item mobile-hide" href="/contact" id="contact">CONTACT</a>
     <a class="nav-item mobile-hide" href="/projects" id="projects">PROJECTS</a>
 
-    <div class="spacer"/> <!-- Spacer -->
+    <div class="spacer"/> <!-- SPACER (IT HAS AUTO MARGINS!) -->
 
-    <a class="nav-item" href="https://github.com/InvalidSE/" id="github" target="_blank"><img class='nav-image' src='/github.svg' alt="github" /></a>
+    <a class="nav-item" href="https://github.com/InvalidSE/" id="github" rel="noreferrer" target="_blank"><img class='nav-image' src='/github.svg' alt="github" /></a>
     <!-- <a class="nav-item" href="https://discord.gg/ashdkaskjdhaskjdh" id="discord">DISCORD</a> -->
 </div>
 
 <style lang="scss">
 
     #navbar{
-        // background-color: #6388d85d;
         width: 100%;
         display: flex;
         flex-direction: row;
-        // box-shadow: 0 0 20px #000000d2;
-        // transform: translateY(-5px);
     }
     
     .nav-item{
@@ -37,21 +34,14 @@
         cursor: pointer;
         transition: background-color 0s;
         transition: 0.5s;
-        // border-top: 5px solid transparent;
         &:hover{
             background-color: #000000d2;
         }
-        
     }
 
     .nav-image{
         padding: 0;
         height: 29px;
-        
-        // center vertically
-        // position: relative;
-        // top: 50%;
-        // transform: translateY(-50%);
     }
 
     .spacer{

@@ -1,7 +1,3 @@
-<script lang="ts">
-
-</script>
-
 <div class="content">
     <div class="text">
         <h1>404</h1>
@@ -18,12 +14,15 @@
         justify-content: center;
         height: 100vh;
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.726), rgba(123, 44, 187, 0.541)), url("/logo-render.webp") no-repeat center center fixed;
+        background-size: cover;
     }
+
     .text {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     a {
         color: white;
         text-decoration: none;
@@ -34,6 +33,7 @@
         border-radius: 5px;
         transition: 0.4s;
 
+        // Hover Effect
         &:hover {
             background-color: white;
             color: black;
