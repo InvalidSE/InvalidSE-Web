@@ -4,13 +4,14 @@
     
     let show_buttons = false
 
+    // When the component mounts, this runs (on load)
     onMount(() => {
 
         // if screen width is less than 700px, instantly show button container
         if (window.innerWidth < 700) {
             show_buttons = true
         } else {
-            // button appear animation
+            // button appear timeout
             setTimeout(() => {
                 show_buttons = true
             }, 250)
@@ -21,11 +22,12 @@
 </script>
 
 <div id="button-container">
+    <!-- SVELTE HAS IF STATEMENTS! (They're amazing) -->
     {#if show_buttons}
         <a id="about" class="nav-button" href="/about">ABOUT</a>
         <a id="contact" class="nav-button" href="/contact">CONTACT</a>
         <a id="projects" class="nav-button" href="/projects">PROJECTS</a>
-        <a id="blog" class="nav-button" target="_blank" href="https://github.com/invalidse">GITHUB</a>
+        <a id="blog" class="nav-button" rel="noreferrer" target="_blank" href="https://github.com/invalidse">GITHUB</a>
     {/if}
 </div>
 
@@ -55,7 +57,6 @@
         opacity: 0;
         animation: fly_up $nav-total-delay forwards;
         border: 1px solid #D0D0D0;
-        // box-shadow: 0 0 10px #18181877;
         transition: 0.4s;
 
         &:hover{
