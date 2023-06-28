@@ -50,7 +50,7 @@
             <div class="technology">
                 <div>
                 <h3>TECHNOLOGY</h3>
-                <p>These are the technologies I have experience in, and or like using: </p>
+                <p>These are the technologies I have experience in: </p>
                 <ul>
                     <li>Svelte & SvelteKit</li>
                     <li>HTML5</li>
