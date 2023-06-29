@@ -31,14 +31,14 @@
             <div class="interests">
                 <h3>INTERESTS</h3>
                 <p>I like to do everything from 3d printing, writing software, creating electronics with microcontrollers, 
-                    to playing chess, hosting minecraft servers.
+                    to playing chess, and hosting Minecraft servers.
                 </p>
             </div>
 
             <div class="projects">
                 <h3>PROJECTS</h3>
                 <p>Some projects I have done in the past include DirtyWatts with the Questionable Research Labs team, 
-                    the Questionable Quote App, Needy Appliances, this website and more. Check out the more extensive list here: 
+                    the Questionable Quote App, Needy Appliances, this website, and more. Check out the more extensive list here: 
                 </p>
 
                 <div class="buttons-box">
