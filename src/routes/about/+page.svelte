@@ -62,7 +62,7 @@
                     <li>Arduino</li>
                 </ul>
                 </div>
-                <img src="/logos.webp" alt="software">
+                <!-- <img src="/logos.webp" alt="software"> -->
             </div>
 
         </div>
@@ -131,10 +131,10 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        img {
-            width: 100%;
-            max-width: 300px;
-        }
+        //img {
+        //    width: 100%;
+        //    max-width: 300px;
+        //}
     }
 
     // Buttons
