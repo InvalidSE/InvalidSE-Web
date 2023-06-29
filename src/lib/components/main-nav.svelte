@@ -32,7 +32,7 @@
 </div>
 
 <style lang="scss">
-    // Button animation delay variables
+    // Button animation delay variables. Code source: https://github.com/jacobtread
     $nav-delay-inc: 0.2s;
     $nav-button-count: 4;
     $nav-total-delay: $nav-delay-inc * $nav-button-count;
@@ -65,7 +65,7 @@
         }
     }
 
-    // Delayed animations for each of the buttons
+    // Delayed animations for each of the buttons. Code source: https://github.com/jacobtread
     $delay: $nav-total-delay;
     @for $i from ($nav-button-count + 1) to 1 {
         .nav-button:nth-child(#{$i}) {
