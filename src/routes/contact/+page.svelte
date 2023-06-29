@@ -15,7 +15,7 @@
     <div class="contact-boxes">
         <div class="contact-box">
             <p>EMAIL</p>
-            <h3>taine.reader@gmail.com</h3>
+            <h3>taine@invalidse.me</h3>
         </div>
         <div class="contact-box">
             <p>DISCORD</p>
