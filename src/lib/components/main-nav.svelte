@@ -17,24 +17,32 @@
             }, 250)
         }
 
-    })     
+    })
+
+    // Random link list
+    const randomLinks = [
+        "https://en.wikipedia.org/wiki/The_Game_(mind_game)",
+        "https://yes.jmw.nz/"
+    ]
+
+    // Random link generator
+    const randomLink = randomLinks[Math.floor(Math.random() * randomLinks.length)]
 
 </script>
 
 <div id="button-container">
     <!-- SVELTE HAS IF STATEMENTS! (They're amazing) -->
     {#if show_buttons}
-        <a id="about" class="nav-button" href="/about">ABOUT</a>
-        <a id="contact" class="nav-button" href="/contact">CONTACT</a>
-        <a id="projects" class="nav-button" href="/projects">PROJECTS</a>
+        <a id="blog" class="nav-button" rel="noreferrer" target="_blank" href="mailto:me@invalidse.me">EMAIL</a>
         <a id="blog" class="nav-button" rel="noreferrer" target="_blank" href="https://github.com/invalidse">GITHUB</a>
+        <a id="blog" class="nav-button" rel="noreferrer" target="_blank" href={randomLink}>SURPRISE</a>
     {/if}
 </div>
 
 <style lang="scss">
     // Button animation delay variables. Code source: https://github.com/jacobtread
     $nav-delay-inc: 0.2s;
-    $nav-button-count: 4;
+    $nav-button-count: 3;
     $nav-total-delay: $nav-delay-inc * $nav-button-count;
 
     #button-container{

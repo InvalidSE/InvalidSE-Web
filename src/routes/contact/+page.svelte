@@ -1,81 +1,42 @@
-<svelte:head>
-    <title>Contact | InvalidSE</title>
-</svelte:head>
-
-<script lang="ts">
-    import Navbar from '../../lib/components/navbar.svelte'
-</script>
-
-<div class="header-panel">
-    <!-- EVERYTHING'S IN THE HEADER! INCREDIBLE. -->
-
-    <Navbar/>
-    <h2 id="heading">Contact</h2>
-
-    <div class="contact-boxes">
-        <div class="contact-box">
-            <p>EMAIL</p>
-            <h3>taine@invalidse.me</h3>
-        </div>
-        <div class="contact-box">
-            <p>DISCORD</p>
-            <h3>InvalidSE</h3>
-        </div>
-        <div class="contact-box">
-            <p>GITHUB</p>
-            <h3>InvalidSE</h3>
-        </div>
+<div class="content">
+    <div class="text">
+        <h1>404</h1>
+        <h2>Page Not Found</h2>
+        <a href="/">Go Home</a>
     </div>
-
 </div>
 
 <style lang="scss">
-
-    .contact-boxes {
+    .content {
         display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 3em;
-        margin: 0 auto;
-        text-align: left;
-    }
-
-    h3 {
-        font-size: 1.5em;
-        margin: 0;
-    }
-
-    p {
-        font-size: 1.1em;
-        font-weight: bolder;
-        margin: 0;
-    }
-
-    .contact-box {
-        border: 1px solid white;
-        border-radius: 10px;
-        padding: 1em;
-        background-color: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-    }
-
-    .header-panel { 
+        flex-direction: column;
         align-items: center;
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.726), rgba(123, 44, 187, 0.541)), url("/code.webp") no-repeat top center fixed;
-        background-size: cover;
+        justify-content: center;
         height: 100vh;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.726), rgba(123, 44, 187, 0.541)), url("/logo-render.webp") no-repeat center center fixed;
+        background-size: cover;
     }
 
-    #heading {
-        text-align: center;
-        margin: 1em 0em;
+    .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    // Media Queries
-    @media only screen and (max-width: 600px) {
-        h2 {
-            font-size: 2em;
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.5em;
+        margin-top: 1em;
+        border: 1px solid white;
+        padding: 0.5em 1em;
+        border-radius: 5px;
+        transition: 0.4s;
+
+        // Hover Effect
+        &:hover {
+            background-color: white;
+            color: black;
         }
     }
 </style>

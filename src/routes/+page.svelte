@@ -17,7 +17,7 @@
 <style lang="scss">
 
     .title-container {
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.726), rgba(123, 44, 187, 0.541)), url("/logo-render.webp") no-repeat center center fixed;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.726), rgba(123, 44, 187, 0.511)), url("/code.webp") no-repeat center center fixed;
         background-size: cover;
 
         margin: 0;
