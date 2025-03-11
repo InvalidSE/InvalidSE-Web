@@ -23,7 +23,7 @@ export default {
     },
   },
   plugins: [
-    require('daisyui'),
+    import('daisyui'),
   ],
   daisyui: {
     themes: ["dark", "dracula", "valentine", "light", "nord"],
