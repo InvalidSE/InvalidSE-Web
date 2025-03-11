@@ -23,10 +23,11 @@ export default {
     },
   },
   plugins: [
-    import('daisyui'),
+    require('daisyui'),
+    require('@tailwindcss/typography'),
   ],
   daisyui: {
-    themes: ["dark", "dracula", "valentine", "light", "nord"],
+    themes: ["dracula", "nord"],
   },
 }
 

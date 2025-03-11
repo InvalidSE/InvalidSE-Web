@@ -5,17 +5,15 @@ import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 
 async function markdownToHtml(string) {
-	return (
-		unified()
-			// turn Markdown into mdast
-			.use(remarkParse)
-			// turn Markdown (mdast) into HTML (hast)
-			.use(remarkRehype, { allowDangerousHtml: true })
-			// turn HTML (hast) into HTML string
-			.use(rehypeStringify, { allowDangerousHtml: true })
-			// process the string
-			.process(string)
-	)
+	return unified()
+        // turn Markdown into mdast
+        .use(remarkParse)
+        // turn Markdown (mdast) into HTML (hast)
+        .use(remarkRehype, { allowDangerousHtml: true })
+        // turn HTML (hast) into HTML string
+        .use(rehypeStringify, { allowDangerousHtml: true })
+        // process the string
+        .process(string)
 }
 
 async function html(content) {
