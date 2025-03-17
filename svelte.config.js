@@ -6,10 +6,16 @@ import markdown from './src/lib/markdown.js';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	extensions: ['.svelte', '.md'],
-	preprocess: [vitePreprocess(), markdown()],
+	preprocess: [
+		vitePreprocess(), 
+		markdown()
+	],
 
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		paths: {
+            base: '/'
+        },
 	}
 };
 

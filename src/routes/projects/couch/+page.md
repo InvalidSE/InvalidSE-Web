@@ -1,6 +1,15 @@
 # Hello
 
-I am Taine Reader
+## The Couch
+[This is a test](https://wikipedia.org/)
 
-This is my website
 
+asdkjhasd
+
+- List
+
+1. list
+
+**Bold** test
+
+![Yuh](./images/1.JPG)
