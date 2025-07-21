@@ -12,4 +12,4 @@ asdkjhasd
 
 **Bold** test
 
-![Yuh](./images/1.JPG)
+![Yuh](/1.JPG)

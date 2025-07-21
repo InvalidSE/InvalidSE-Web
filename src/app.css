@@ -4,6 +4,7 @@
 @plugin "@tailwindcss/typography";
 
 @plugin "daisyui" {
-    themes: nord --default, dracula --prefersdark;
+    themes: nord --default;
+    /* themes: nord --default, dracula --prefersdark; */
     root: ":root";
   }

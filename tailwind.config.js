@@ -27,7 +27,8 @@ export default {
     require('@tailwindcss/typography'),
   ],
   daisyui: {
-    themes: ["dracula", "nord"],
+    themes: ["nord"],
+    // themes: ["nord", "dracula"],
   },
 }
 
