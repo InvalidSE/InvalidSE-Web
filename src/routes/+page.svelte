@@ -4,27 +4,31 @@
 
 <div class="container mx-auto lg:py-40">
     <section class="title">
-        <div class="my-10 flex flex-col">
-            <span class="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-primary via-accent to-primary text-transparent bg-clip-text animate-gradient bg-300%">
-                Taine Reader
-            </span>
-            <span class="font-bold text-xl md:text-2xl lg:text-3xl">
-                Engineering student at the University of Auckland
+        <div class=" flex flex-col">
+            <div>
+                <span class="text-5xl md:text-7xl lg:text-8xl">
+                    Kia ora, I'm 
+                </span><span class="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-primary via-accent to-primary text-transparent bg-clip-text animate-gradient bg-300%">
+                    Taine
+                </span>
+            </div>
+            <span class="my-5 text-xl md:text-2xl lg:text-3xl">
+                I'm a second-year computer systems engineering student at the University of Auckland
             </span>
         </div>
-        <div class="flex flex-col md:flex-row lg:flex-row gap-2">
-            <a href="/projects" class="btn btn-outline text-xl">Projects</a>
-            <a href="#contact" class="btn btn-outline text-xl">Contact</a>
+        <div class="flex flex-col sm:flex-row lg:flex-row gap-2">
             <a href="#about" class="btn btn-outline text-xl">About</a>
-            <a href="#technology" class="btn btn-outline text-xl">Technology</a>
+            <a href="/projects" class="btn btn-outline text-xl">Projects</a>
+            <!-- <a href="#technology" class="btn btn-outline text-xl">Technology</a> -->
+            <a href="#contact" class="btn btn-outline text-xl">Contact</a>
         </div>
     </section>
-    <div class="spacer my-40" />
-    <section class="content flex flex-col gap-40">
-        <section class="contact">
+    <div class="spacer my-20" />
+    <section class="content flex flex-col gap-20">
+        <!-- <section class="contact">
             <span class="text-5xl font-bold">Contact</span>
             <div class="spacer my-4" />
-            <div class="flex flex-col md:flex-row lg:flex-row gap-2">
+            <div class="flex flex-col sm:flex-row lg:flex-row gap-2">
                 <a href="mailto:me@invalidse.com" class="btn btn-outline text-xl">
                     Email
                 </a>
@@ -36,17 +40,96 @@
                     LinkedIn
                 </a>
                 <a href="https://discord.com/" target="_blank" class="btn btn-outline text-xl">
-                    Discord
+                    Discord 
                 </a>
             </div>
-        </section>
-        <section>
-            <span class="text-5xl font-bold">About</span>
-        </section>
-        <section>
-            <span class="text-5xl font-bold">Technology</span>
+        </section> -->
+        <section class="projects">
+            <span class="text-5xl font-bold">Highlighted Projects</span>
+            <div class="spacer my-4" />
+            <div class="flex flex-wrap-reverse flex-row gap-2">
+                <div class="card bg-base-100 w-96 shadow-lg">
+                    <figure>
+                        <img
+                        src="./1.JPG"
+                        alt="The couch" 
+                        class="h-48 w-96 object-cover"
+                        />
+                    </figure>
+                    <div class="card-body">
+                        <!-- <div class="card-actions">
+                            <div class="badge badge-outline">TerribleHack</div>
+                            <div class="badge badge-outline">Physical</div>
+                        </div> -->
+                        <h2 class="card-title">The Motorised Couch</h2>
+                        <p>We put motors, wheels, underglow and suspension onto a one dollar couch.</p>
+                        <!-- <div class="card-actions justify-end mt-2">
+                            <a href="#about" class="btn btn-outline text-l">Read More</a>
+                        </div> -->
+                        <div class="card-actions justify-end">
+                            <div class="badge badge-outline">TerribleHack</div>
+                            <div class="badge badge-outline">Physical</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-wrap-reverse gap-2">
+                <div class="card bg-base-100 w-96 shadow-lg">
+                    <figure>
+                        <img
+                        src="./1.JPG"
+                        alt="The couch" 
+                        class="h-48 w-96 object-cover"
+                        />
+                    </figure>
+                    <div class="card-body">
+                        <!-- <div class="card-actions">
+                            <div class="badge badge-outline">TerribleHack</div>
+                            <div class="badge badge-outline">Physical</div>
+                        </div> -->
+                        <h2 class="card-title">The Motorised Couch</h2>
+                        <p>We put motors, wheels, underglow and suspension onto a one dollar couch.</p>
+                        <!-- <div class="card-actions justify-end mt-2">
+                            <a href="#about" class="btn btn-outline text-l">Read More</a>
+                        </div> -->
+                        <div class="card-actions justify-end">
+                            <div class="badge badge-outline">TerribleHack</div>
+                            <div class="badge badge-outline">Physical</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-wrap-reverse gap-2">
+                <div class="card bg-base-100 w-96 shadow-lg">
+                    <figure>
+                        <img
+                        src="./1.JPG"
+                        alt="The couch" 
+                        class="h-48 w-96 object-cover"
+                        />
+                    </figure>
+                    <div class="card-body">
+                        <!-- <div class="card-actions">
+                            <div class="badge badge-outline">TerribleHack</div>
+                            <div class="badge badge-outline">Physical</div>
+                        </div> -->
+                        <h2 class="card-title">The Motorised Couch</h2>
+                        <p>We put motors, wheels, underglow and suspension onto a one dollar couch.</p>
+                        <!-- <div class="card-actions justify-end mt-2">
+                            <a href="#about" class="btn btn-outline text-l">Read More</a>
+                        </div> -->
+                        <div class="card-actions justify-end">
+                            <div class="badge badge-outline">TerribleHack</div>
+                            <div class="badge badge-outline">Physical</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="divider my-4" /> -->
         </section>
     </section>
+
+    
 
     <!-- <label class="swap swap-rotate">
         <input type="checkbox" class="theme-controller" value="nord" />
