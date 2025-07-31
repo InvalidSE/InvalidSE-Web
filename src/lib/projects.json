@@ -1,0 +1,174 @@
+[
+    {
+        "title": "The Motorised Couch",
+        "description": "We put motors, wheels, underglow and suspension onto a one dollar couch. (Feat. William Osman)",
+        "tags": ["TerribleHack", "Physical", "Electrical"],
+        "image": "./projects/couch/1.JPG",
+        "link": "/projects/couch",
+        "readMore": true,
+        "highlighted": true
+    },
+    {
+        "title": "DirtyWatts",
+        "description": "A web app for visualising how our energy in New Zealand is being generated.",
+        "tags": ["GovHack", "Full-Stack"],
+        "image": "./projects/dirtywatts/1.JPG",
+        "link": "/projects/dirtywatts",
+        "readMore": true,
+        "highlighted": true
+
+    },
+    {
+        "title": "QSAT",
+        "description": "We put a film camera into a rocket.",
+        "tags": ["UoA/APSS", "Hardware", "Firmware"],
+        "image": "./projects/qsat/1.JPG",
+        "link": "/projects/qsat",
+        "readMore": true,
+        "highlighted": true
+    },
+    {
+        "title": "Signal Quo",
+        "description": "A secondary emergency LoRa mesh communications network (designed for Mars) for a hackathon.",
+        "tags": ["Grapple23", "Full-Stack", "Hardware"],
+        "image": "./projects/signalquo/1.JPG",
+        "link": "/projects/signalquo",
+        "readMore": true,
+        "highlighted": true
+    },
+    {
+        "title": "True Random",
+        "description": "Random number generation, featuring an overengineered robot arm.",
+        "tags": ["TerribleHack", "Full-Stack", "Hardware"],
+        "image": "./projects/invalidse/1.JPG",
+        "link": "/projects/invalidse",
+        "readMore": true,
+        "highlighted": true
+    },
+    {
+        "title": "Keyboard Art",
+        "description": "Letting the internet draw on my keyboard LEDs",
+        "tags": ["WIP", "Full-Stack"],
+        "image": "",
+        "link": "",
+        "readMore": false,
+        "highlighted": true
+    },
+    {
+        "title": "Taser Chess",
+        "description": "Chess, but the less time you have on the clock, the more shocking it becomes.",
+        "tags": ["Hardware", "Firmware", "TerribleHack"],
+        "image": "",
+        "link": "",
+        "readMore": false,
+        "highlighted": true
+    },
+    {
+        "title": "Times of Interest",
+        "description": "A smart COVID-19 places of interest map, made in 2021.",
+        "tags": ["Frontend", "GovHack"],
+        "image": "",
+        "link": "",
+        "readMore": false,
+        "highlighted": true
+    },
+    {
+        "title": "A Tens Situation",
+        "description": "",
+        "tags": ["Unity", "Hardware", "Firmware"],
+        "image": "",
+        "link": "",
+        "readMore": false,
+        "highlighted": true
+    },
+    {
+        "title": "BiasLenz",
+        "description": "",
+        "tags": ["GovHack", "Frontend", "Python"],
+        "image": "",
+        "link": "",
+        "readMore": false,
+        "highlighted": true
+    },
+    {
+        "title": "Threatinator",
+        "description": "",
+        "tags": ["Hardware"],
+        "image": "",
+        "link": "",
+        "readMore": false,
+        "highlighted": true
+    },
+    {
+        "title": "Grin Reaper",
+        "description": "Workplace happyness enforcing in the form of an automated nerf turret.",
+        "tags": ["CV"],
+        "image": "",
+        "link": "",
+        "readMore": false,
+        "highlighted": true
+    },
+    {
+        "title": "Reptile Monitor",
+        "description": "",
+        "tags": ["IoT", "Python", "Science Fair"],
+        "image": "",
+        "link": "",
+        "readMore": false,
+        "highlighted": true
+    },
+    {
+        "title": "Covid Swarm",
+        "description": "",
+        "tags": ["Full-Stack", "GovHack"],
+        "image": "",
+        "link": "",
+        "readMore": false,
+        "highlighted": true
+    },
+    {
+        "title": "Tetrialplane",
+        "description": "",
+        "tags": [""],
+        "image": "",
+        "link": "",
+        "readMore": false,
+        "highlighted": true
+    },
+    {
+        "title": "Lost (The Game)",
+        "description": "",
+        "tags": [""],
+        "image": "",
+        "link": "",
+        "readMore": false,
+        "highlighted": true
+    },
+    {
+        "title": "Fast Scribe",
+        "description": "",
+        "tags": [""],
+        "image": "",
+        "link": "",
+        "readMore": false,
+        "highlighted": true
+    },
+    {
+        "title": "Got Receipts",
+        "description": "",
+        "tags": [""],
+        "image": "",
+        "link": "",
+        "readMore": false,
+        "highlighted": true
+    },
+    {
+        "title": "StreakSaver",
+        "description": "",
+        "tags": [""],
+        "image": "",
+        "link": "",
+        "readMore": false,
+        "highlighted": true
+    }
+]
