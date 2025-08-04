@@ -3,56 +3,62 @@
         "title": "The Motorised Couch",
         "description": "We put motors, wheels, underglow and suspension onto a one dollar couch. (Feat. William Osman)",
         "tags": ["TerribleHack", "Physical", "Electrical"],
-        "image": "./projects/couch/1.JPG",
+        "image": "./projects/couch/driving.jpg",
         "link": "/projects/couch",
-        "readMore": true,
+        "externalLink": "",
+        "video": "https://www.youtube.com/watch?v=XmJU1ODA8ZE",
         "highlighted": true
     },
     {
         "title": "DirtyWatts",
-        "description": "A web app for visualising how our energy in New Zealand is being generated.",
-        "tags": ["GovHack", "Full-Stack"],
-        "image": "./projects/dirtywatts/1.JPG",
+        "description": "A project for visualising and effectively utilising our green energy in New Zealand.",
+        "tags": ["GovHack", "Full-Stack", "Embedded"],
+        "image": "./projects/dirtywatts/awards2.jpg",
         "link": "/projects/dirtywatts",
-        "readMore": true,
+        "externalLink": "https://dirtywatts.nz/",
+        "github": "https://github.com/Questionable-Research-Labs/DirtyWatts",
+        "video": "https://www.youtube.com/watch?v=wvJlPGGfMgM",
         "highlighted": true
-
     },
     {
         "title": "QSAT",
         "description": "We put a film camera into a rocket.",
         "tags": ["UoA/APSS", "Hardware", "Firmware"],
-        "image": "./projects/qsat/1.JPG",
+        "image": "./projects/qsat/launch.png",
         "link": "/projects/qsat",
-        "readMore": true,
+        "externalLink": "",
+        "video": "",
         "highlighted": true
     },
     {
         "title": "Signal Quo",
         "description": "A secondary emergency LoRa mesh communications network (designed for Mars) for a hackathon.",
         "tags": ["Grapple23", "Full-Stack", "Hardware"],
-        "image": "./projects/signalquo/1.JPG",
-        "link": "/projects/signalquo",
-        "readMore": true,
-        "highlighted": true
+        "image": "",
+        "externalLink": "https://signalquo.qrl.nz/about",
+        "highlighted": false
     },
     {
         "title": "True Random",
         "description": "Random number generation, featuring an overengineered robot arm.",
         "tags": ["TerribleHack", "Full-Stack", "Hardware"],
-        "image": "./projects/invalidse/1.JPG",
-        "link": "/projects/invalidse",
-        "readMore": true,
-        "highlighted": true
+        "image": "",
+        "link": "",
+        "externalLink": "https://tr.host.qrl.nz/",
+        "video": "",
+        "readMore": false,
+        "highlighted": false
     },
     {
         "title": "Keyboard Art",
         "description": "Letting the internet draw on my keyboard LEDs",
         "tags": ["WIP", "Full-Stack"],
-        "image": "",
+        "image": "./projects/keyboardart/keyboard.png",
         "link": "",
+        "externalLink": "",
+        "video": "",
         "readMore": false,
-        "highlighted": true
+        "highlighted": false
     },
     {
         "title": "Taser Chess",
@@ -60,8 +66,10 @@
         "tags": ["Hardware", "Firmware", "TerribleHack"],
         "image": "",
         "link": "",
+        "externalLink": "",
+        "video": "",
         "readMore": false,
-        "highlighted": true
+        "highlighted": false
     },
     {
         "title": "Times of Interest",
@@ -69,8 +77,10 @@
         "tags": ["Frontend", "GovHack"],
         "image": "",
         "link": "",
+        "externalLink": "",
+        "video": "",
         "readMore": false,
-        "highlighted": true
+        "highlighted": false
     },
     {
         "title": "A Tens Situation",
@@ -78,8 +88,10 @@
         "tags": ["Unity", "Hardware", "Firmware"],
         "image": "",
         "link": "",
+        "externalLink": "",
+        "video": "",
         "readMore": false,
-        "highlighted": true
+        "highlighted": false
     },
     {
         "title": "BiasLenz",
@@ -87,8 +99,10 @@
         "tags": ["GovHack", "Frontend", "Python"],
         "image": "",
         "link": "",
+        "externalLink": "",
+        "video": "",
         "readMore": false,
-        "highlighted": true
+        "highlighted": false
     },
     {
         "title": "Threatinator",
@@ -96,8 +110,10 @@
         "tags": ["Hardware"],
         "image": "",
         "link": "",
+        "externalLink": "",
+        "video": "",
         "readMore": false,
-        "highlighted": true
+        "highlighted": false
     },
     {
         "title": "Grin Reaper",
@@ -105,8 +121,10 @@
         "tags": ["CV"],
         "image": "",
         "link": "",
+        "externalLink": "",
+        "video": "",
         "readMore": false,
-        "highlighted": true
+        "highlighted": false
     },
     {
         "title": "Reptile Monitor",
@@ -114,8 +132,10 @@
         "tags": ["IoT", "Python", "Science Fair"],
         "image": "",
         "link": "",
+        "externalLink": "",
+        "video": "",
         "readMore": false,
-        "highlighted": true
+        "highlighted": false
     },
     {
         "title": "Covid Swarm",
@@ -123,8 +143,10 @@
         "tags": ["Full-Stack", "GovHack"],
         "image": "",
         "link": "",
+        "externalLink": "",
+        "video": "",
         "readMore": false,
-        "highlighted": true
+        "highlighted": false
     },
     {
         "title": "Tetrialplane",
@@ -132,8 +154,10 @@
         "tags": [""],
         "image": "",
         "link": "",
+        "externalLink": "",
+        "video": "",
         "readMore": false,
-        "highlighted": true
+        "highlighted": false
     },
     {
         "title": "Lost (The Game)",
@@ -141,34 +165,54 @@
         "tags": [""],
         "image": "",
         "link": "",
+        "externalLink": "",
+        "video": "",
         "readMore": false,
-        "highlighted": true
+        "highlighted": false
     },
     {
         "title": "Fast Scribe",
-        "description": "",
-        "tags": [""],
+        "description": "A multiplayer typing test game built in 48h.",
+        "tags": ["KiwiJam", "Full-Stack"],
         "image": "",
         "link": "",
+        "externalLink": "https://scribe.qinnovate.nz/",
+        "github": "https://github.com/Fallstop/fast-scribe",
+        "video": "",
         "readMore": false,
-        "highlighted": true
+        "highlighted": false
     },
     {
         "title": "Got Receipts",
-        "description": "",
+        "description": "A reciept printer that my friends can send messages to, and it'll deliver them to me right on my desk.",
         "tags": [""],
         "image": "",
         "link": "",
+        "externalLink": "",
+        "video": "",
         "readMore": false,
-        "highlighted": true
+        "highlighted": false
     },
     {
         "title": "StreakSaver",
-        "description": "",
-        "tags": [""],
+        "description": "A tool to help me keep my duolingo streak when I was on holiday.",  
+        "tags": ["Selenium", "Python"],
         "image": "",
         "link": "",
+        "externalLink": "",
+        "video": "",
         "readMore": false,
-        "highlighted": true
+        "highlighted": false
+    },
+    {
+        "title": "Fridge Controller",
+        "description": "A temperature controller for an industrial refrigerator.",
+        "tags": ["Electrical", "Firmware"],
+        "image": "",
+        "link": "",
+        "externalLink": "",
+        "video": "",
+        "readMore": false,
+        "highlighted": false
     }
 ]

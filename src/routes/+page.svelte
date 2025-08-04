@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Project from '$lib/components/Project.svelte';
+  import ProjectDisplay from '$lib/components/ProjectDisplay.svelte';
   import projects from '$lib/projects.json';
 </script>
 
@@ -18,7 +18,7 @@
                 </span>
             </div>
             <span class="my-5 text-xl md:text-2xl lg:text-3xl">
-                I'm a computer systems engineering student at the University of Auckland 
+                I'm a computer systems engineering student at the University of Auckland
             </span>
         </div>
         <div class="flex flex-col sm:flex-row lg:flex-row gap-2">
@@ -34,7 +34,7 @@
             <div class="spacer my-4" />
             <div class="flex flex-wrap-reverse flex-row gap-2">
                 {#each projects.filter(project => project.highlighted) as project}
-                    <Project {project} />
+                    <ProjectDisplay {project} />
                 {/each}
             </div>
         </section>

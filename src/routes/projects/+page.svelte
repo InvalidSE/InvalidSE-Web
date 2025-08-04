@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Project from '$lib/components/Project.svelte';
-  import projects from '$lib/projects.json';
+  import ProjectDisplay from '$lib/components/ProjectDisplay.svelte';
+  import { projects } from '$lib/projects';
 </script>
 
 <svelte:head>
@@ -18,7 +18,7 @@
                 </span>
             </div>
             <span class="my-5 text-xl md:text-2xl lg:text-3xl">
-                Here's some of my faavourite projects I've worked on.
+                Here's some of my favourite projects I've worked on.
             </span>
         </div>
     </section>
@@ -28,7 +28,7 @@
             <div class="spacer my-4" />
             <div class="flex flex-wrap-reverse flex-row gap-2">
                 {#each projects as project}
-                    <Project {...project} />
+                    <ProjectDisplay {project} />
                 {/each}
             </div>
         </section>
