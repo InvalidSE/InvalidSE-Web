@@ -1,14 +1,16 @@
 <script lang="ts">
     import type { Project } from '$lib/projects';
     export let project: Project;
+
+    // TODO random grow values
 </script>
 
-<div class="card bg-base-100 w-96 shadow-lg image-full hover:shadow-xl transition-shadow duration-300 cursor-pointer hover:scale-105 transition-transform duration-300 hover:translate-y-[-2px] z-0 hover:z-10">
-    <figure>
+<div class="relative {project.highlighted ? 'grow-[7]' : 'grow-[]'} card bg-base-100 w-96 shadow-lg image-full hover:shadow-xl transition-shadow duration-300 cursor-pointer hover:scale-105 transition-transform duration-300 hover:translate-y-[-2px] z-0 hover:z-10 overflow-hidden">
+    <figure class="absolute inset-0 w-full h-full z-0">
         <img
         src={project.image}
         alt={project.title}
-        class="h-48 w-96 object-cover"
+        class="w-full h-full object-cover"
         />
     </figure>
     <div class="card-body">

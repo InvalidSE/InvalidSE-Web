@@ -26,7 +26,7 @@
     <section class="content flex flex-col gap-20">
         <section class="projects">
             <div class="spacer my-4" />
-            <div class="flex flex-wrap-reverse flex-row gap-2">
+            <div class="flex flex-wrap flex-row gap-2">
                 {#each projects as project}
                     <ProjectDisplay {project} />
                 {/each}
