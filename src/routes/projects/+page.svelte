@@ -20,9 +20,39 @@
             <span class="my-5 text-xl md:text-2xl lg:text-3xl">
                 Here's some of my favourite projects I've worked on.
             </span>
-            <div class="flex flex-col sm:flex-row lg:flex-row gap-2">
+            <div class="flex flex-col sm:flex-row lg:flex-row gap-2 items-center">
                 <a href="/" class="btn btn-outline text-xl">Home</a>
-                <a href="#contact" class="btn btn-outline text-xl">Contact</a>
+                <a
+                    href="mailto:taine@reader.nz"
+                    class="btn btn-outline btn-square"
+                    aria-label="Email"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M3 6.75A2.75 2.75 0 0 1 5.75 4h12.5A2.75 2.75 0 0 1 21 6.75v10.5A2.75 2.75 0 0 1 18.25 20H5.75A2.75 2.75 0 0 1 3 17.25V6.75zm2.2-.25 6.8 5.22 6.8-5.22H5.2zm13.3 2.07-5.89 4.53a1 1 0 0 1-1.22 0L5.5 8.57v8.68c0 .14.11.25.25.25h12.5a.25.25 0 0 0 .25-.25V8.57z" />
+                    </svg>
+                </a>
+                <a
+                    href="https://www.linkedin.com/in/taine-reader/"
+                    class="btn btn-outline btn-square"
+                    aria-label="LinkedIn"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M6.94 8.5A1.56 1.56 0 1 1 6.94 5.38a1.56 1.56 0 0 1 0 3.12zM5.62 9.75h2.64V18H5.62V9.75zm4.2 0h2.53v1.13h.03c.35-.67 1.2-1.38 2.47-1.38 2.64 0 3.13 1.74 3.13 4V18h-2.64v-3.99c0-.95-.02-2.18-1.33-2.18-1.33 0-1.54 1.04-1.54 2.11V18H9.82V9.75z" />
+                    </svg>
+                </a>
+                <a
+                    href="https://github.com/invalidse"
+                    class="btn btn-outline btn-square"
+                    aria-label="GitHub"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.21.68-.48v-1.67c-2.78.6-3.37-1.18-3.37-1.18-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.61.07-.61 1 .07 1.52 1.02 1.52 1.02.88 1.5 2.31 1.07 2.87.82.09-.64.35-1.07.63-1.31-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.98 1.03-2.68-.11-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.5 9.5 0 0 1 12 6.8c.85 0 1.71.11 2.51.33 1.9-1.29 2.74-1.02 2.74-1.02.55 1.38.21 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.83-2.34 4.67-4.57 4.92.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2z" />
+                    </svg>
+                </a>
             </div>
         </div>
     </section>
