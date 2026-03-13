@@ -1,12 +1,12 @@
 <script lang="ts">
-  import UnderConstruction from '../lib/components/UnderConstruction.svelte';
+//   import UnderConstruction from '../lib/components/UnderConstruction.svelte';
 
   import ProjectDisplay from '$lib/components/ProjectDisplay.svelte';
   import projects from '$lib/projects.json';
 </script>
 
 <svelte:head>
-
+    <title>Taine Reader</title>
 </svelte:head>
 
 <div class="container mx-auto lg:py-40">
@@ -16,19 +16,19 @@
                 <span class="text-5xl md:text-7xl lg:text-8xl">
                     Kia ora, I'm 
                 </span><span class="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-primary via-accent to-primary text-transparent bg-clip-text animate-gradient bg-300%">
-                    Taine
+                    Taine Reader
                 </span>
             </div>
             <span class="my-5 text-xl md:text-2xl lg:text-3xl">
                 I'm a computer systems engineering student at the University of Auckland
             </span>
         </div>
-        <UnderConstruction />
-        <!-- <div class="flex flex-col sm:flex-row lg:flex-row gap-2">
-            <a href="#about" class="btn btn-outline text-xl">About</a>
+        <!-- <UnderConstruction /> -->
+        <div class="flex flex-col sm:flex-row lg:flex-row gap-2">
+            <!-- <a href="#about" class="btn btn-outline text-xl">About</a> -->
             <a href="/projects" class="btn btn-outline text-xl">Projects</a>
             <a href="#contact" class="btn btn-outline text-xl">Contact</a>
-        </div> -->
+        </div>
     </section>
     <div class="spacer my-20" />
     <section class="content flex flex-col gap-5">
@@ -37,7 +37,7 @@
             <div class="spacer my-4" />
             <div class="flex flex-wrap-reverse flex-row gap-2">
                 {#each projects.filter(project => project.highlighted) as project}
-                    <ProjectDisplay {project} />
+                    <ProjectDisplay project={{ ...project, highlighted: project.highlighted ?? false }} />
                 {/each}
             </div>
         </section>

@@ -1,6 +1,5 @@
 <script lang="ts">
   import ProjectDisplay from '$lib/components/ProjectDisplay.svelte';
-	import UnderConstruction from '$lib/components/UnderConstruction.svelte';
   import { projects } from '$lib/projects';
 </script>
 
@@ -21,7 +20,10 @@
             <span class="my-5 text-xl md:text-2xl lg:text-3xl">
                 Here's some of my favourite projects I've worked on.
             </span>
-            <UnderConstruction />
+            <div class="flex flex-col sm:flex-row lg:flex-row gap-2">
+                <a href="/" class="btn btn-outline text-xl">Home</a>
+                <a href="#contact" class="btn btn-outline text-xl">Contact</a>
+            </div>
         </div>
     </section>
     <div class="spacer my-20" />
