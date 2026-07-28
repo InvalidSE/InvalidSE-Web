@@ -1,15 +1,17 @@
 <script lang="ts">
   import type { Project } from '$lib/projects';
-  import { parseMarkdownDocument } from '$lib/markdown';
+  import { renderContent } from '$lib/typst';
 
   export let data: {
     project: Project;
     content: string | null;
+    contentFormat: 'markdown' | 'typst';
   };
 
   const project = data.project;
   const content = data.content;
-  const parsedContent = content ? parseMarkdownDocument(content) : { metadata: {}, body: '', html: '' };
+  const contentFormat = data.contentFormat ?? 'markdown';
+  const parsedContent = content ? renderContent(content, contentFormat) : { metadata: {}, body: '', html: '' };
   const metadata = parsedContent.metadata as Record<string, string | string[] | undefined>;
   const articleTitle = typeof metadata.title === 'string' && metadata.title.trim() ? metadata.title : project.title;
   const articleSummary = typeof metadata.summary === 'string' && metadata.summary.trim() ? metadata.summary : project.description;

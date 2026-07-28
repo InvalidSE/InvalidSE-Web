@@ -9,8 +9,11 @@ export function load({ params }) {
     throw error(404, 'Project not found');
   }
 
+  const contentData = getProjectContent(params.slug);
+
   return {
     project,
-    content: getProjectContent(params.slug)
+    content: contentData.content,
+    contentFormat: contentData.format
   };
 }

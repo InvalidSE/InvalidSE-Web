@@ -1,19 +1,29 @@
-const contentModules = import.meta.glob('../content/projects/*.md', {
+const markdownModules = import.meta.glob('../content/projects/*.md', {
+  eager: true,
+  query: '?raw',
+  import: 'default'
+}) as Record<string, string>;
+
+const typstModules = import.meta.glob('../content/projects/*.{typ,typst}', {
   eager: true,
   query: '?raw',
   import: 'default'
 }) as Record<string, string>;
 
 function getSlugFromPath(path: string): string {
-  return path.split('/').pop()?.replace(/\.md$/, '') ?? '';
+  return path.split('/').pop()?.replace(/\.(md|typ|typst)$/, '') ?? '';
 }
 
-export function getProjectContent(slug: string): string | null {
-  const moduleEntry = Object.entries(contentModules).find(([path]) => getSlugFromPath(path) === slug);
-
-  if (!moduleEntry) {
-    return null;
+export function getProjectContent(slug: string): { content: string | null; format: 'markdown' | 'typst' } {
+  const markdownEntry = Object.entries(markdownModules).find(([path]) => getSlugFromPath(path) === slug);
+  if (markdownEntry) {
+    return { content: markdownEntry[1], format: 'markdown' };
   }
 
-  return moduleEntry[1];
+  const typstEntry = Object.entries(typstModules).find(([path]) => getSlugFromPath(path) === slug);
+  if (typstEntry) {
+    return { content: typstEntry[1], format: 'typst' };
+  }
+
+  return { content: null, format: 'markdown' };
 }

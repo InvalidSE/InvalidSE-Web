@@ -16,7 +16,10 @@ function escapeHtml(value: string): string {
 function formatInline(text: string): string {
   let output = escapeHtml(text);
 
-  output = output.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" class="rounded-2xl my-6 shadow-lg" />');
+  output = output.replace(
+    /!\[([^\]]*)\]\(([^)]+)\)/g,
+    '<img src="$2" alt="$1" class="rounded-2xl my-6 shadow-lg w-full max-w-full mx-auto lg:max-w-[70%]" />'
+  );
   output = output.replace(/\[([^\]]+)]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noreferrer">$1</a>');
   output = output.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
   output = output.replace(/\*([^*]+)\*/g, '<em>$1</em>');
