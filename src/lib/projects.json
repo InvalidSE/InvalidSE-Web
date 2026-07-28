@@ -2,206 +2,296 @@
     {
         "title": "The Motorised Couch",
         "description": "We put motors, wheels, underglow and suspension onto a one dollar couch. (Feat. William Osman)",
-        "tags": ["TerribleHack", "Physical", "Electrical"],
+        "tags": [
+            "TerribleHack",
+            "Physical",
+            "Electrical"
+        ],
         "image": "./projects/couch/driving.jpg",
         "externalLink": "",
         "video": "https://www.youtube.com/watch?v=XmJU1ODA8ZE",
-        "highlighted": true
+        "highlighted": true,
+        "slug": "the-motorised-couch"
     },
     {
         "title": "DirtyWatts",
         "description": "A project for visualising and effectively utilising our green energy in New Zealand.",
-        "tags": ["GovHack", "Full-Stack", "Embedded"],
+        "tags": [
+            "GovHack",
+            "Full-Stack",
+            "Embedded"
+        ],
         "image": "./projects/dirtywatts/awards2.jpg",
         "externalLink": "https://dirtywatts.nz/",
         "github": "https://github.com/Questionable-Research-Labs/DirtyWatts",
         "video": "https://www.youtube.com/watch?v=wvJlPGGfMgM",
-        "highlighted": true
+        "highlighted": true,
+        "slug": "dirtywatts"
     },
     {
         "title": "QSAT",
         "description": "We put a film camera into a rocket.",
-        "tags": ["UoA/APSS", "Hardware", "Firmware"],
+        "tags": [
+            "UoA/APSS",
+            "Hardware",
+            "Firmware"
+        ],
         "image": "./projects/qsat/launch.png",
         "externalLink": "https://jmw.nz/projects/QSatFilmCamera",
         "video": "",
-        "highlighted": true
+        "highlighted": true,
+        "slug": "qsat"
     },
     {
         "title": "Smart Energy Monitor",
         "description": "The winning project of COMPSYS & ELECTENG 209, a smart energy monitor with over-the-air firmware updates, wave reconstruction and a full web interface.",
         "image": "./projects/energymonitor/energymonitor.webp",
-        "tags": ["UoA", "Full-Stack", "Firmware", "Electrical"],
-        "externalLink": "https://jmw.nz/projects/CompSys209"
+        "tags": [
+            "UoA",
+            "Full-Stack",
+            "Firmware",
+            "Electrical"
+        ],
+        "externalLink": "https://jmw.nz/projects/CompSys209",
+        "slug": "smart-energy-monitor"
     },
     {
         "title": "Human Interaction Simulator",
         "image": "./projects/humaninteractionsimulator/humaninteractionsimulator.webp",
-        "tags": ["Cloudflare Workers", "Hackathons"],
+        "tags": [
+            "Cloudflare Workers",
+            "Hackathons"
+        ],
         "description": "Human interaction, via a recursive Cloudflare workers function. Built for a hackathon.",
-        "github": "https://github.com/questionable-innovations/watchful-halloween-2025"
+        "github": "https://github.com/questionable-innovations/watchful-halloween-2025",
+        "slug": "human-interaction-simulator"
     },
     {
         "title": "Signal Quo",
         "description": "A secondary emergency LoRa mesh communications network (designed for Mars) for a hackathon.",
-        "tags": ["Grapple23", "Full-Stack", "Hardware"],
+        "tags": [
+            "Grapple23",
+            "Full-Stack",
+            "Hardware"
+        ],
         "image": "./projects/signalquo/alertrunning.webp",
         "externalLink": "https://signalquo.qrl.nz/about",
-        "highlighted": false
+        "highlighted": false,
+        "slug": "signal-quo"
     },
     {
         "title": "True Random",
         "description": "Random number generation, featuring an overengineered robot arm.",
-        "tags": ["TerribleHack", "Full-Stack", "Hardware"],
+        "tags": [
+            "TerribleHack",
+            "Full-Stack",
+            "Hardware"
+        ],
         "image": "./projects/truerandom/truerandom.webp",
         "link": "",
         "externalLink": "https://tr.host.qrl.nz/",
         "video": "",
         "readMore": false,
-        "highlighted": false
+        "highlighted": false,
+        "slug": "true-random"
     },
     {
         "title": "Keyboard Art",
         "description": "Letting the internet draw on my keyboard LEDs. Work in progress! I promise I'll finish it one day.",
-        "tags": ["WIP", "Full-Stack"],
+        "tags": [
+            "WIP",
+            "Full-Stack"
+        ],
         "image": "./projects/keyboardart/keyboard.png",
         "link": "",
         "externalLink": "",
         "video": "",
         "readMore": false,
-        "highlighted": false
+        "highlighted": false,
+        "slug": "keyboard-art"
     },
     {
         "title": "Taser Chess",
         "description": "Chess, but the less time you have on the clock, the more shocking it becomes.",
-        "tags": ["Hardware", "Firmware", "TerribleHack"],
+        "tags": [
+            "Hardware",
+            "Firmware",
+            "TerribleHack"
+        ],
         "image": "./projects/taserchess/taserchess.webp",
         "link": "",
         "externalLink": "",
         "video": "",
         "readMore": false,
-        "highlighted": false
+        "highlighted": false,
+        "slug": "taser-chess"
     },
     {
         "title": "Times of Interest",
         "description": "A smart COVID-19 places of interest map, made in 2021.",
-        "tags": ["Frontend", "GovHack"],
+        "tags": [
+            "Frontend",
+            "GovHack"
+        ],
         "image": "./projects/toi/toi.webp",
         "externalLink": "https://toi.qrl.nz/",
         "video": "https://youtu.be/ciZy_tA8-SQ",
         "readMore": false,
-        "highlighted": false
+        "highlighted": false,
+        "slug": "times-of-interest"
     },
     {
         "title": "A Tens Situation",
         "description": "A VR game where you fight off spiders - and get shocked if you get bitten. Made for TerribleHack 2020.",
-        "tags": ["Unity", "Hardware", "Firmware"],
+        "tags": [
+            "Unity",
+            "Hardware",
+            "Firmware"
+        ],
         "image": "./projects/tens/tens.webp",
         "link": "",
         "externalLink": "",
         "video": "",
         "readMore": false,
-        "highlighted": false
+        "highlighted": false,
+        "slug": "a-tens-situation"
     },
     {
         "title": "BiasLenz",
         "description": "A tool that tries to use machine learning to detect bias in news articles via the emotion of the politicians in the article photos. Built for a hackathon.",
-        "tags": ["GovHack", "Frontend", "Python"],
+        "tags": [
+            "GovHack",
+            "Frontend",
+            "Python"
+        ],
         "image": "./projects/biaslenz/biaslenz.webp",
         "link": "https://biaslenz.qrl.nz/",
         "externalLink": "",
         "video": "",
         "readMore": false,
-        "highlighted": false
+        "highlighted": false,
+        "slug": "biaslenz"
     },
     {
         "title": "Threatinator",
         "description": "DTaaS - Death Threats as a Service - are you tired of manually cutting out letters from newspapers to make your death threats? Let the Threatinator do it for you! Made for a hackathon.",
-        "tags": ["Hardware"],
+        "tags": [
+            "Hardware"
+        ],
         "image": "./projects/threatinator/threatinator.webp",
         "link": "",
         "externalLink": "",
         "video": "",
         "readMore": false,
-        "highlighted": false
+        "highlighted": false,
+        "slug": "threatinator"
     },
     {
         "title": "Grin Reaper",
         "description": "Workplace happiness enforcing in the form of an automated nerf turret.",
-        "tags": ["CV", "Full-Stack", "Hardware"],
+        "tags": [
+            "CV",
+            "Full-Stack",
+            "Hardware"
+        ],
         "image": "./projects/grinreaper/grinreaper.webp",
         "link": "",
         "externalLink": "",
         "video": "",
         "readMore": false,
-        "highlighted": false
+        "highlighted": false,
+        "slug": "grin-reaper"
     },
     {
         "title": "Reptile Monitor",
         "description": "A bearded dragon safety system, to make sure they stay at the correct temperature. This was my introduction to the world of engineering!",
-        "tags": ["IoT", "Python", "Science Fair"],
+        "tags": [
+            "IoT",
+            "Python",
+            "Science Fair"
+        ],
         "image": "./projects/reptilemonitor/reptilemonitor.webp",
         "link": "",
         "externalLink": "",
         "video": "",
         "readMore": false,
-        "highlighted": false
+        "highlighted": false,
+        "slug": "reptile-monitor"
     },
     {
         "title": "Lost (The Game)",
         "description": "An attempt at making a multiplayer game in 48 hours.",
-        "tags": ["KiwiJam", "Unity"],
+        "tags": [
+            "KiwiJam",
+            "Unity"
+        ],
         "image": "./projects/lost/lost.png",
         "link": "",
         "externalLink": "https://invalidse.itch.io/lost-the-game",
         "github": "https://github.com/Questionable-Research-Labs/KiwiJam24",
         "video": "",
         "readMore": false,
-        "highlighted": false
+        "highlighted": false,
+        "slug": "lost-the-game"
     },
     {
         "title": "Fast Scribe",
         "description": "A multiplayer typing test game built in 48h. One person reads aloud, and the other has to type it out.",
-        "tags": ["KiwiJam", "Full-Stack"],
+        "tags": [
+            "KiwiJam",
+            "Full-Stack"
+        ],
         "image": "./projects/fastscribe/fastscribe.png",
         "link": "",
         "externalLink": "https://scribe.qinnovate.nz/",
         "github": "https://github.com/Fallstop/fast-scribe",
         "video": "",
         "readMore": false,
-        "highlighted": false
+        "highlighted": false,
+        "slug": "fast-scribe"
     },
     {
         "title": "Got Receipts",
         "description": "A reciept printer that my friends can send messages to, and it'll deliver them to me right on my desk. Made to learn the basics of Rust.",
-        "tags": ["Software"],
+        "tags": [
+            "Software"
+        ],
         "image": "./projects/gotreciepts/cropped.webp",
         "link": "",
         "externalLink": "",
         "video": "",
         "readMore": false,
-        "highlighted": false
+        "highlighted": false,
+        "slug": "got-receipts"
     },
     {
         "title": "StreakSaver",
-        "description": "A tool to help me keep my duolingo streak when I was on holiday.",  
-        "tags": ["Selenium", "Python"],
+        "description": "A tool to help me keep my duolingo streak when I was on holiday.",
+        "tags": [
+            "Selenium",
+            "Python"
+        ],
         "image": "./placeholders/1.webp",
         "link": "",
         "externalLink": "",
         "video": "",
         "readMore": false,
-        "highlighted": false
+        "highlighted": false,
+        "slug": "streaksaver"
     },
     {
         "title": "Fridge Controller",
         "description": "A temperature controller for an industrial refrigerator.",
-        "tags": ["Electrical", "Firmware"],
+        "tags": [
+            "Electrical",
+            "Firmware"
+        ],
         "image": "./placeholders/1.webp",
         "link": "",
         "externalLink": "",
         "video": "",
         "readMore": false,
-        "highlighted": false
+        "highlighted": false,
+        "slug": "fridge-controller"
     }
 ]

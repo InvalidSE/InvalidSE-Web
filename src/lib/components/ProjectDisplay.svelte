@@ -3,7 +3,7 @@
     export let project: Project;
 </script>
 
-<div class="relative {project.highlighted ? 'grow-[7]' : 'grow'} card bg-base-100 w-96 shadow-lg image-full hover:shadow-xl transition-shadow duration-300 cursor-pointer hover:scale-105 transition-transform duration-300 hover:translate-y-[-2px] z-0 hover:z-10 overflow-hidden">
+<a href={project.slug ? `/projects/${project.slug}` : '#'} class="relative {project.highlighted ? 'grow-[7]' : 'grow'} card bg-base-100 w-96 shadow-lg image-full hover:shadow-xl transition-shadow duration-300 cursor-pointer hover:scale-105 transition-transform duration-300 hover:translate-y-[-2px] z-0 hover:z-10 overflow-hidden block" aria-label={`Open ${project.title}`}>
     <figure class="absolute inset-0 w-full h-full z-0">
         <img
         src={project.image}
@@ -11,7 +11,7 @@
         class="w-full h-full object-cover"
         />
     </figure>
-    <div class="card-body">
+    <div class="card-body relative z-10">
         <h2 class="card-title">{project.title}</h2>
         <p>{project.description}</p>
         {#if project.tags && project.tags.length > 0}
@@ -45,5 +45,5 @@
             </div>
         {/if}
     </div>
-</div>
+</a>
 
