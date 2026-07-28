@@ -1,6 +1,6 @@
 <script lang="ts">
   import ProjectDisplay from '$lib/components/ProjectDisplay.svelte';
-  import projects from '$lib/projects.json';
+  import { projects } from '$lib/projects';
 </script>
 
 <div role="alert" class="alert alert-warning alert-outline">
@@ -9,4 +9,3 @@
         </svg>
         <span class="text-xl">Website under construction!</span>
         </div>
-

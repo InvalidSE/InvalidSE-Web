@@ -2,7 +2,7 @@
 //   import UnderConstruction from '../lib/components/UnderConstruction.svelte';
 
   import ProjectDisplay from '$lib/components/ProjectDisplay.svelte';
-  import projects from '$lib/projects.json';
+  import { highlightedProjects } from '$lib/projects';
 </script>
 
 <svelte:head>
@@ -66,8 +66,8 @@
             <span class="text-5xl font-bold">Highlighted Projects</span>
             <div class="spacer my-4" />
             <div class="flex flex-wrap-reverse flex-row gap-2">
-                {#each projects.filter(project => project.highlighted) as project}
-                    <ProjectDisplay project={{ ...project, highlighted: project.highlighted ?? false }} />
+                {#each highlightedProjects as project}
+                    <ProjectDisplay {project} />
                 {/each}
             </div>
         </section>
@@ -96,4 +96,3 @@
         </svg>
     </label> -->
 </div>
-
