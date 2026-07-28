@@ -9,25 +9,23 @@ tags:
   - "Electrical"
 image: "./projects/couch/driving.jpg"
 link: "/projects/couch"
-externalLink: "https://yes.jmw.nz"
 video: "https://www.youtube.com/watch?v=XmJU1ODA8ZE"
+github: "https://github.com/invalidse/couch"
 embedVideo: false
 highlighted: true
 ---
 
-# Overview
+# The Plan
+In December 2023, we wanted to make something special for the [Terrible Ideas Hackathon](https://terriblehack.com/). 
 
-We put motors, wheels, underglow and suspension onto a one dollar couch. (Feat. William Osman)
+Earlier in the year, in anticipation of a similar project, we had purchased a couch from Facebook Marketplace for $1. The week before the hackathon, we happened to come across a broken electric wheelchair. Naturally, we decided to combine the two in a bit of a non-standard manner: Each side of the couch would be controlled by a separate controller, for a truly terrifying bonding experience. 
 
-This page is now backed by markdown, which makes it much easier to grow into a proper build log with notes, photos, and lessons learned over time.
-
-## Project Notes
-
-The buttons above link out to the video and any other supporting material for this build.
+## The Build
 
 
+## Gallery
 
-Hello!!
-
-image check: 
-![](./projects/couch/driving.jpg)
+:::gallery
+![The couch out for a test drive](./projects/couch/driving.jpg)
+![Launch day for QSAT](./projects/qsat/launch.png)
+:::

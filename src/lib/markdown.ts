@@ -25,6 +25,20 @@ function sanitizeUrl(url: string): string {
 	return '#';
 }
 
+function parseMarkdownImage(line: string): { alt: string; url: string } | null {
+	const match = line.trim().match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+
+	if (!match) {
+		return null;
+	}
+
+	const [, alt, rawUrl] = match;
+	return {
+		alt,
+		url: sanitizeUrl(rawUrl)
+	};
+}
+
 function renderInlineMarkdown(source: string): string {
 	const codeSpans: string[] = [];
 	let html = escapeHtml(source);
@@ -69,9 +83,23 @@ function renderList(lines: string[], ordered: boolean): string {
 	return `<${tag}>${items}</${tag}>`;
 }
 
+function renderGallery(lines: string[]): string {
+	const items = lines
+		.map(parseMarkdownImage)
+		.filter((item): item is { alt: string; url: string } => item !== null)
+		.map(({ alt, url }) => {
+			const caption = alt ? `<figcaption>${renderInlineMarkdown(alt)}</figcaption>` : '';
+			return `<figure class="markdown-gallery-item"><img src="${escapeHtml(url)}" alt="${escapeHtml(alt)}" />${caption}</figure>`;
+		})
+		.join('');
+
+	return `<div class="markdown-gallery">${items}</div>`;
+}
+
 function isSpecialBlock(line: string): boolean {
 	return Boolean(
 		line.match(/^(#{1,6})\s+/) ||
+			line.match(/^:::gallery\s*$/) ||
 			line.match(/^```/) ||
 			line.match(/^[-*]\s+/) ||
 			line.match(/^\d+\.\s+/) ||
@@ -110,6 +138,25 @@ export function renderMarkdown(source: string): string {
 		if (/^(-{3,}|\*{3,}|_{3,})$/.test(line.trim())) {
 			blocks.push('<hr />');
 			index += 1;
+			continue;
+		}
+
+		if (/^:::gallery\s*$/.test(line.trim())) {
+			const galleryLines: string[] = [];
+			index += 1;
+
+			while (index < lines.length && !/^:::\s*$/.test(lines[index].trim())) {
+				if (lines[index].trim()) {
+					galleryLines.push(lines[index].trim());
+				}
+				index += 1;
+			}
+
+			if (index < lines.length) {
+				index += 1;
+			}
+
+			blocks.push(renderGallery(galleryLines));
 			continue;
 		}
 
