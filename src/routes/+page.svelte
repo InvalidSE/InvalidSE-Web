@@ -105,8 +105,7 @@
             <div class="spacer my-4" />
             <div class="flex flex-col gap-5 text-lg md:text-xl lg:text-2xl">
                 <p>
-                    Interested in collaborating, chatting about projects, or just saying hello?
-                    I’d love to hear from you.
+                    Want to contact me? Feel free to reach out!
                 </p>
 
                 <div class="grid gap-4 md:grid-cols-2">
@@ -114,9 +113,8 @@
                         href="mailto:taine@reader.nz"
                         class="rounded-2xl border border-base-content/20 bg-base-100/80 p-5 shadow-sm transition duration-200 hover:-translate-y-1 hover:border-primary hover:shadow-xl"
                     >
-                        <div class="text-sm uppercase tracking-[0.2em] text-accent">Email</div>
+                        <div class="text-sm uppercase tracking-[0.2em]">Email</div>
                         <div class="mt-2 font-semibold text-base-content">taine@reader.nz</div>
-                        <div class="mt-1 text-sm opacity-70">General enquiries and project ideas</div>
                     </a>
 
                     <a
@@ -125,9 +123,8 @@
                         target="_blank"
                         rel="noreferrer"
                     >
-                        <div class="text-sm uppercase tracking-[0.2em] text-accent">LinkedIn</div>
+                        <div class="text-sm uppercase tracking-[0.2em]">LinkedIn</div>
                         <div class="mt-2 font-semibold text-base-content">/taine-reader</div>
-                        <div class="mt-1 text-sm opacity-70">Connect professionally</div>
                     </a>
 
                     <a
@@ -136,9 +133,8 @@
                         target="_blank"
                         rel="noreferrer"
                     >
-                        <div class="text-sm uppercase tracking-[0.2em] text-accent">GitHub</div>
-                        <div class="mt-2 font-semibold text-base-content">@invalidse</div>
-                        <div class="mt-1 text-sm opacity-70">View code and project work</div>
+                        <div class="text-sm uppercase tracking-[0.2em]">GitHub</div>
+                        <div class="mt-2 font-semibold text-base-content">InvalidSE</div>
                     </a>
                 </div>
             </div>
