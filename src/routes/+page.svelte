@@ -28,6 +28,12 @@
             <!-- <a href="#about" class="btn btn-outline text-xl">About</a> -->
             <a href="/projects" class="btn btn-outline text-xl">Projects</a>
             <a
+                href="/photos"
+                class="btn btn-outline text-xl"
+            >
+                Photography
+            </a>
+            <a
                 href="mailto:taine@reader.nz"
                 class="btn btn-outline btn-square"
                 aria-label="Email"
@@ -60,6 +66,23 @@
             </a>
         </div>
     </section>
+
+    <div class="spacer my-20" />
+
+    <section class="content flex flex-col gap-5">
+        <section class="about">
+            <span class="text-5xl font-bold">About Me</span>
+            <div class="spacer my-4" />
+            <span class="text-lg md:text-xl lg:text-2xl">
+                Hi there! I'm Taine, a computer systems engineering student with a passion for bridging the gap between the digital world and the physical one. 
+
+                I love tinkering with various projects and solving complex problems. 
+                
+                When I'm not making things, I like to play guitar and <a href="/photos" class="link">take photos</a>. 
+            </span>
+        </section>
+    </section> 
+
     <div class="spacer my-20" />
     <section class="content flex flex-col gap-5">
         <section class="projects">
@@ -74,7 +97,53 @@
         <a href="/projects" class="btn btn-outline text-xl">View All</a>
     </section>
 
-    
+    <div class="spacer my-20" />
+
+    <section class="content flex flex-col gap-5">
+        <section class="contact">
+            <span class="text-5xl font-bold">Contact</span>
+            <div class="spacer my-4" />
+            <div class="flex flex-col gap-5 text-lg md:text-xl lg:text-2xl">
+                <p>
+                    Interested in collaborating, chatting about projects, or just saying hello?
+                    I’d love to hear from you.
+                </p>
+
+                <div class="grid gap-4 md:grid-cols-2">
+                    <a
+                        href="mailto:taine@reader.nz"
+                        class="rounded-2xl border border-base-content/20 bg-base-100/80 p-5 shadow-sm transition duration-200 hover:-translate-y-1 hover:border-primary hover:shadow-xl"
+                    >
+                        <div class="text-sm uppercase tracking-[0.2em] text-accent">Email</div>
+                        <div class="mt-2 font-semibold text-base-content">taine@reader.nz</div>
+                        <div class="mt-1 text-sm opacity-70">General enquiries and project ideas</div>
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/in/taine-reader/"
+                        class="rounded-2xl border border-base-content/20 bg-base-100/80 p-5 shadow-sm transition duration-200 hover:-translate-y-1 hover:border-primary hover:shadow-xl"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <div class="text-sm uppercase tracking-[0.2em] text-accent">LinkedIn</div>
+                        <div class="mt-2 font-semibold text-base-content">/taine-reader</div>
+                        <div class="mt-1 text-sm opacity-70">Connect professionally</div>
+                    </a>
+
+                    <a
+                        href="https://github.com/invalidse"
+                        class="rounded-2xl border border-base-content/20 bg-base-100/80 p-5 shadow-sm transition duration-200 hover:-translate-y-1 hover:border-primary hover:shadow-xl"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <div class="text-sm uppercase tracking-[0.2em] text-accent">GitHub</div>
+                        <div class="mt-2 font-semibold text-base-content">@invalidse</div>
+                        <div class="mt-1 text-sm opacity-70">View code and project work</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </section>
 
     <!-- <label class="swap swap-rotate">
         <input type="checkbox" class="theme-controller" value="dracula" />
