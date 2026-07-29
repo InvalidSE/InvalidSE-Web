@@ -39,6 +39,32 @@ function parseMarkdownImage(line: string): { alt: string; url: string } | null {
 	};
 }
 
+function getYoutubeEmbedUrl(url: string): string | null {
+	if (!url) {
+		return null;
+	}
+
+	try {
+		const parsed = new URL(url);
+		const hostname = parsed.hostname.replace(/^www\./, '');
+		let videoId = '';
+
+		if (hostname === 'youtube.com' || hostname === 'm.youtube.com') {
+			videoId = parsed.searchParams.get('v') ?? '';
+		} else if (hostname === 'youtu.be') {
+			videoId = parsed.pathname.slice(1);
+		}
+
+		if (!videoId) {
+			return null;
+		}
+
+		return `https://www.youtube.com/embed/${videoId}`;
+	} catch {
+		return null;
+	}
+}
+
 function renderInlineMarkdown(source: string): string {
 	const codeSpans: string[] = [];
 	let html = escapeHtml(source);
@@ -96,10 +122,21 @@ function renderGallery(lines: string[]): string {
 	return `<div class="markdown-gallery">${items}</div>`;
 }
 
+function renderYoutubeBlock(url: string): string {
+	const embedUrl = getYoutubeEmbedUrl(url);
+
+	if (!embedUrl) {
+		return `<p><a href="${escapeHtml(sanitizeUrl(url))}" target="_blank" rel="noreferrer">${escapeHtml(url)}</a></p>`;
+	}
+
+	return `<div class="markdown-youtube"><div class="markdown-youtube-frame"><iframe src="${escapeHtml(embedUrl)}" title="Embedded YouTube video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></div>`;
+}
+
 function isSpecialBlock(line: string): boolean {
 	return Boolean(
 		line.match(/^(#{1,6})\s+/) ||
 			line.match(/^:::gallery\s*$/) ||
+			line.match(/^:::youtube\s+/) ||
 			line.match(/^```/) ||
 			line.match(/^[-*]\s+/) ||
 			line.match(/^\d+\.\s+/) ||
@@ -157,6 +194,14 @@ export function renderMarkdown(source: string): string {
 			}
 
 			blocks.push(renderGallery(galleryLines));
+			continue;
+		}
+
+		const youtubeMatch = line.trim().match(/^:::youtube\s+(.+)$/);
+		if (youtubeMatch) {
+			const rawUrl = youtubeMatch[1].trim().replace(/\s+:::\s*$/, '');
+			blocks.push(renderYoutubeBlock(rawUrl));
+			index += 1;
 			continue;
 		}
 
