@@ -13,13 +13,21 @@ externalLink: "https://dirtywatts.nz/"
 github: "https://github.com/Questionable-Research-Labs/DirtyWatts"
 video: "https://www.youtube.com/watch?v=wvJlPGGfMgM"
 highlighted: true
+embedVideo: false
 ---
 # Overview
 
 DirtyWatts was a project for visualising and effectively utilising green energy in New Zealand.
 
-Moving this into markdown means the project page can now hold longer writeups, architecture notes, and post-hackathon improvements without having to keep expanding a JSON blob.
+## Submission Video
 
-## Project Notes
+:::youtube https://www.youtube.com/watch?v=wvJlPGGfMgM
 
-Use the buttons above to jump to the live site, repository, and demo video.
+## Awards
+This project won:
+
+> ***Technology Literacy in a Digital First World*** 
+> sponsored by Infosys
+
+> ***Best Creative Use of Data in Response to ESG (NZ)*** 
+> sponsored by Trimble, Smart Christchurch, Questionable Research Labs, Media Design School, UC Centre for Entrepreneurship

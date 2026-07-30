@@ -8,9 +8,10 @@ tags:
   - "Frontend"
   - "Python"
 image: "./projects/biaslenz/biaslenz.webp"
-link: "https://biaslenz.qrl.nz/"
-externalLink: ""
+link: ""
+externalLink: "https://biaslenz.qrl.nz/"
 video: ""
+github: "https://github.com/Questionable-Research-Labs/govhack-23"
 readMore: false
 highlighted: false
 ---

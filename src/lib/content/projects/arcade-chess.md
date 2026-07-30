@@ -11,6 +11,6 @@ image: "./projects/arcade-chess/arcade-chess.jpg"
 link: ""
 externalLink: ""
 video: ""
-readMore: true
+readMore: false
 highlighted: false
 ---
