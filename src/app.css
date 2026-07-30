@@ -11,9 +11,31 @@
 
 .markdown-gallery {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 	gap: 1rem;
+	width: 100%;
 	margin: 2rem 0;
+}
+
+.markdown-gallery--single {
+	grid-template-columns: minmax(0, 1fr);
+	justify-items: center;
+}
+
+.markdown-gallery--capped {
+	grid-template-columns: repeat(
+		auto-fit,
+		minmax(
+			max(
+				20rem,
+				calc(
+					(100% - (var(--markdown-gallery-max-columns) - 1) * 1rem) /
+						var(--markdown-gallery-max-columns)
+				)
+			),
+			1fr
+		)
+	);
 }
 
 .markdown-gallery-item {
@@ -22,6 +44,10 @@
 	border-radius: 1rem;
 	background: color-mix(in srgb, oklch(var(--b2)) 88%, black 12%);
 	box-shadow: 0 10px 30px rgb(0 0 0 / 0.12);
+}
+
+.markdown-gallery--single .markdown-gallery-item {
+	width: min(100%, 48rem);
 }
 
 .markdown-gallery-item img {

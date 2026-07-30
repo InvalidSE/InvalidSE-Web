@@ -1,7 +1,7 @@
 ---
-title: "QSAT"
+title: "QSAT Film Camera"
 slug: "qsat"
-sortOrder: 3
+sortOrder: 5
 description: "We put a film camera into a rocket."
 tags:
   - "UoA/APSS"

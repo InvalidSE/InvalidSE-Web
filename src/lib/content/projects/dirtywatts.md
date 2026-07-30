@@ -1,7 +1,7 @@
 ---
 title: "DirtyWatts"
 slug: "dirtywatts"
-sortOrder: 2
+sortOrder: 3
 description: "A project for visualising and effectively utilising our green energy in New Zealand."
 tags:
   - "GovHack"

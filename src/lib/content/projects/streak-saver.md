@@ -1,7 +1,7 @@
 ---
 title: "StreakSaver"
 slug: "streak-saver"
-sortOrder: 19
+sortOrder: 20
 description: "A tool to help me keep my duolingo streak when I was on holiday."
 tags:
   - "Selenium"

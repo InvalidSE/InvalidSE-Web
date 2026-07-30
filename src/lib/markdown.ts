@@ -109,17 +109,70 @@ function renderList(lines: string[], ordered: boolean): string {
 	return `<${tag}>${items}</${tag}>`;
 }
 
-function renderGallery(lines: string[]): string {
-	const items = lines
+type GalleryOptions = {
+	maxColumns?: number;
+	showCaptions: boolean;
+};
+
+function parseGalleryOptions(line: string): GalleryOptions | null {
+	const match = line.trim().match(/^:::gallery(?:\s+(.+))?$/);
+
+	if (!match) {
+		return null;
+	}
+
+	const rawOptions = match[1]?.trim();
+
+	if (!rawOptions) {
+		return { showCaptions: true };
+	}
+
+	const [rawMaxColumns, rawShowCaptions] = rawOptions.split(/\s+/, 2);
+	const parsedMaxColumns = Number.parseInt(rawMaxColumns, 10);
+
+	if (!Number.isInteger(parsedMaxColumns) || parsedMaxColumns < 1) {
+		return { showCaptions: true };
+	}
+
+	const normalizedShowCaptions = rawShowCaptions?.toLowerCase();
+	const showCaptions =
+		normalizedShowCaptions === undefined
+			? true
+			: ['true', '1', 'yes', 'on'].includes(normalizedShowCaptions);
+
+	return {
+		maxColumns: parsedMaxColumns,
+		showCaptions
+	};
+}
+
+function renderGallery(lines: string[], options: GalleryOptions): string {
+	const galleryItems = lines
 		.map(parseMarkdownImage)
-		.filter((item): item is { alt: string; url: string } => item !== null)
+		.filter((item): item is { alt: string; url: string } => item !== null);
+
+	const items = galleryItems
 		.map(({ alt, url }) => {
-			const caption = alt ? `<figcaption>${renderInlineMarkdown(alt)}</figcaption>` : '';
+			const caption =
+				options.showCaptions && alt ? `<figcaption>${renderInlineMarkdown(alt)}</figcaption>` : '';
 			return `<figure class="markdown-gallery-item"><img src="${escapeHtml(url)}" alt="${escapeHtml(alt)}" />${caption}</figure>`;
 		})
 		.join('');
 
-	return `<div class="markdown-gallery">${items}</div>`;
+	const galleryClass =
+		[
+			'markdown-gallery',
+			galleryItems.length === 1 ? 'markdown-gallery--single' : '',
+			options.maxColumns !== undefined ? 'markdown-gallery--capped' : ''
+		]
+			.filter(Boolean)
+			.join(' ');
+	const style =
+		options.maxColumns !== undefined
+			? ` style="--markdown-gallery-max-columns: ${options.maxColumns};"`
+			: '';
+
+	return `<div class="${galleryClass}"${style}>${items}</div>`;
 }
 
 function renderYoutubeBlock(url: string): string {
@@ -135,7 +188,7 @@ function renderYoutubeBlock(url: string): string {
 function isSpecialBlock(line: string): boolean {
 	return Boolean(
 		line.match(/^(#{1,6})\s+/) ||
-			line.match(/^:::gallery\s*$/) ||
+			line.match(/^:::gallery(?:\s+.+)?$/) ||
 			line.match(/^:::youtube\s+/) ||
 			line.match(/^```/) ||
 			line.match(/^[-*]\s+/) ||
@@ -178,7 +231,8 @@ export function renderMarkdown(source: string): string {
 			continue;
 		}
 
-		if (/^:::gallery\s*$/.test(line.trim())) {
+		const galleryOptions = parseGalleryOptions(line);
+		if (galleryOptions) {
 			const galleryLines: string[] = [];
 			index += 1;
 
@@ -193,7 +247,7 @@ export function renderMarkdown(source: string): string {
 				index += 1;
 			}
 
-			blocks.push(renderGallery(galleryLines));
+			blocks.push(renderGallery(galleryLines, galleryOptions));
 			continue;
 		}
 

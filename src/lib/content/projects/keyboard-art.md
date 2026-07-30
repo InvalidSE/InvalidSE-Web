@@ -1,7 +1,7 @@
 ---
 title: "Keyboard Art"
 slug: "keyboard-art"
-sortOrder: 8
+sortOrder: 10
 description: "Letting the internet draw on my keyboard LEDs. Work in progress! I promise I'll finish it one day."
 tags:
   - "WIP"

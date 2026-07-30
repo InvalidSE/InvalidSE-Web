@@ -1,7 +1,7 @@
 ---
 title: "Grin Reaper"
 slug: "grin-reaper"
-sortOrder: 14
+sortOrder: 10
 description: "Workplace happiness enforcing in the form of an automated nerf turret."
 tags:
   - "CV"

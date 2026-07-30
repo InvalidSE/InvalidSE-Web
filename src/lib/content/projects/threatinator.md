@@ -1,7 +1,7 @@
 ---
 title: "Threatinator"
 slug: "threatinator"
-sortOrder: 13
+sortOrder: 10
 description: "DTaaS - Death Threats as a Service - are you tired of manually cutting out letters from newspapers to make your death threats? Let the Threatinator do it for you! Made for a hackathon."
 tags:
   - "Hardware"

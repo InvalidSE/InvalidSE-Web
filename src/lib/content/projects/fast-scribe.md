@@ -1,7 +1,7 @@
 ---
 title: "Fast Scribe"
 slug: "fast-scribe"
-sortOrder: 17
+sortOrder: 10
 description: "A multiplayer typing test game built in 48h. One person reads aloud, and the other has to type it out."
 tags:
   - "KiwiJam"

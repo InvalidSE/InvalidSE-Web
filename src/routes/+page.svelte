@@ -124,7 +124,7 @@
                         rel="noreferrer"
                     >
                         <div class="text-sm uppercase tracking-[0.2em]">LinkedIn</div>
-                        <div class="mt-2 font-semibold text-base-content">/taine-reader</div>
+                        <div class="mt-2 font-semibold text-base-content">/in/taine-reader</div>
                     </a>
 
                     <a
@@ -134,7 +134,7 @@
                         rel="noreferrer"
                     >
                         <div class="text-sm uppercase tracking-[0.2em]">GitHub</div>
-                        <div class="mt-2 font-semibold text-base-content">InvalidSE</div>
+                        <div class="mt-2 font-semibold text-base-content">@InvalidSE</div>
                     </a>
                 </div>
             </div>

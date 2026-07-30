@@ -1,7 +1,7 @@
 ---
 title: "Taser Chess"
 slug: "taser-chess"
-sortOrder: 9
+sortOrder: 10
 description: "Chess, but the less time you have on the clock, the more shocking it becomes."
 tags:
   - "Hardware"

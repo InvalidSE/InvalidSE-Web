@@ -1,7 +1,7 @@
 ---
 title: "Human Interaction Simulator"
 slug: "human-interaction-simulator"
-sortOrder: 5
+sortOrder: 10
 description: "Human interaction, via a recursive Cloudflare workers function. Built for a hackathon."
 tags:
   - "Cloudflare Workers"
@@ -11,6 +11,7 @@ link: ""
 externalLink: ""
 github: "https://github.com/questionable-innovations/watchful-halloween-2025"
 highlighted: false
+readMore: false
 ---
 # Overview
 

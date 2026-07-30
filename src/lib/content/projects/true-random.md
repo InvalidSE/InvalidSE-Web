@@ -1,7 +1,7 @@
 ---
 title: "True Random"
 slug: "true-random"
-sortOrder: 7
+sortOrder: 10
 description: "Random number generation, featuring an overengineered robot arm."
 tags:
   - "TerribleHack"
