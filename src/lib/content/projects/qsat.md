@@ -12,6 +12,7 @@ link: ""
 externalLink: "https://jmw.nz/projects/QSatFilmCamera"
 video: ""
 highlighted: true
+readMore: false
 ---
 # Overview
 
