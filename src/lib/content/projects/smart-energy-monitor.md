@@ -12,6 +12,7 @@ image: "./projects/energymonitor/energymonitor.webp"
 link: ""
 externalLink: "https://jmw.nz/projects/CompSys209"
 highlighted: false
+readMore: false
 ---
 # Overview
 
