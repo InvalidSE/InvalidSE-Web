@@ -1,8 +1,8 @@
 ---
-title: "QSat APSS"
+title: "QSAT Film Camera"
 slug: "qsat"
 sortOrder: 5
-description: "Fitting a pocket film camera into a rocket payload."
+description: "We put a film camera into a rocket."
 tags:
   - "UoA/APSS"
   - "Hardware"
@@ -22,9 +22,8 @@ collaborators:
   - "Joel Mansor | https://www.linkedin.com/in/joel-mansor-bb7654223/"
 ---
 
-## We launched a film camera in a rocket in 2025.
-With modern electronics, advanced CAD, and the latest 3D printing technology, we managed to capture an entirely white film frame.
-This is the cool story of how we managed to capture perhaps the most boring photo possible.
+# We launched a film camera in a rocket in 2025.
+With modern electronics, advanced CAD, and the latest 3D printing technology, we managed to capture an entirely white film frame. This is the cool story of how we managed to capture perhaps the most boring photo possible.
 
 ![A pure white frame](./projects/qsat/final-photo.jpg)
 
@@ -48,18 +47,16 @@ To fit the theme, we selected "The Most Retro" as our superlative. We decided to
 
 The payload must fit into a tiny space, around the [same size as a tin can](./projects/qsat/size-comparison.webp), so we needed a tiny film camera to match. We settled on the [Kodak Winner Pocket Camera](https://filmphotographyproject.com/kodak-winner-110-pocket-camera-review/), a small 110 film camera that was one of the [official sponsors of the 1988 Olympic Games](https://collectiblend.com/Cameras/Kodak-Eastman/Winner-Camera-(1988-Olympics).html). The camera is small, light, and dead-simple to operate. It has a fixed focus lens, a fixed aperture, and a fixed shutter speed. The only thing we needed to automate was the shutter release and film advance.
 
-#### Mission Definition Review
+### Mission Definition Review
 
 Once we had our concept, we needed to present it to the APSS team for approval. It was a simple presentation, where we outlined our concept, the components we would use, and the timeline for the project. We also outlined the risks and challenges we would face, and how we would mitigate them. The presentation was well received, and we were given the green light to proceed with the project.
 
 ![QSat MDR](./projects/qsat/qsat-mdr.pdf)
 
-## First iteration
-
+## First Iteration
 Once we had the green light, we split the team in two and started to design our payload. Both the mechanical team and the electrical team started to work on the first prototype from both ends, working towards the Preliminary Design Review deadline. The mechanical team started to design the payload structure, while the electrical team worked on the main Motherboard. We also started to source the components we would need for the project.
 
 ### Electrical
-
 Despite the very analog nature of the film camera, we needed a full electrical subsystem to act as our flight computer. Not only did it need to detect and trigger the film camera at apogee; we also aimed to dynamically advance the film frame, trigger a digital camera to capture matching shots, and even broadcast flight information over a LoRa radio. Ambitious plans indeed.
 
 ![System Layout](./projects/qsat/system-layout.svg)
@@ -68,7 +65,7 @@ Due to the mechanical constraints below, we had super limited space for the onbo
 
 To start, we merged the MCU & Beacon example PCB's into one schematic, and began work in Altium. We had a heap of features to integrate.
 
-### Motor control system
+### Motor Control System
 Unfortunately our film camera was designed for humans to operate, not robots. The trigger was simple to operate, a basic push-button mechanism the fired the fixed shutter. The film advance mechanism, on the other hand, was another beast. To advance each frame, you had to slide the flat lever back and forth until it physically locked in place. Sometimes this required just one slide, other times you needed to work it back and forth three times for a single shot.
 
 While this tactile feedback system works perfectly for a human who can see and feel the mechanism, it posed a significant challenge for our robotic system that had to determine the correct position purely through mechanical feedback.
@@ -86,7 +83,7 @@ For implementing, we decided on using an SG-90 servo for both the trigger and fi
 After all, if it didn't work, we always had the next iteration to get it right. This is what we call foreshadowing.
 
 ### Mechanical
-**Constraints:** 
+#### Constraints:
 - The payload must fit within the I class rocket. 
 - The airspace that can house the payload has a maximum height of 125 mm and a maximum width/diameter of 74 mm. 
 - This airspace must also have room to hold the parachute when it's not being deployed. 
@@ -105,12 +102,20 @@ As a result of us maximising the rocket tube's airspace, we had to come up with 
 'Version 0' was our initial proof-of-concept to make sure our film camera could fit inside our allocated payload size. We 3D printed a cylinder with the area for the camera cut out of the inside. The benefits of doing this allowed the whole team to get an idea of area around the camera we have to work with, and with the CAD model we could start allocating space for different elements.
 
 #### Version 1
-![Version 1 Open](./projects/qsat/version-one/version-1-open.jpg)
 
 With version 1 we began exploring size and placement of elements. We knew roughly what elements were going into the payload, so we were able to cut out the space for them. This allowed us to explore whether the internal structure would hold with so much material cut out. This included performing drop tests and general structural tests.
 Another element that was explored was how we can open & close the payload. This problem is nontrivial as the payload must retain its outer cylindrical form, and a top cap could not be used as the internal structure of the payload could not all be accessed. So the idea for a clamshell mechanism was tested. The payload shell was split vertically, with holes to allow 4 bolts to hold the shell together. Another benefit of this design was, with the camera removed, all internal electronics were easily accessible to run wires.
 
+![Version 1 Open](./projects/qsat/version-one/version-1-open.jpg)
+
+
 #### Version 2
+
+Added: 
+- Airspace surrounding the space where the servos would go were expanded for allowing a better fit of the the servos.
+- Airspace created at the base of the interior of the shell to allow for placement of the PSU board.
+- Cutouts were made in front of the location where the film camera lens were going to look out from. 
+- Cutout also made for the ESP-32 Cam lens to look out through.
 
 ![Fit Check 2](./projects/qsat/fit-check-1.jpg)
 :::gallery 4 transparent
@@ -119,10 +124,6 @@ Another element that was explored was how we can open & close the payload. This 
 ![](./projects/qsat/version-two/v2-3.jpg)
 ![](./projects/qsat/version-two/v2-4.jpg)
 :::
-
-Airspace surrounding the space where the servos would go were expanded for allowing a better fit of the the servos.
-Airspace created at the base of the interior of the shell to allow for placement of the PSU board.
-Cutouts were made in front of the location where the film camera lens were going to look out from. Cutout also made for the ESP-32 Cam lens to look out through.
 
 After attempting to place the servos into their dedicated spot, the airspaces were found to still be too tight. Modifications were temporarily made by removing some of the supporting walls inside using a scalpel.
 

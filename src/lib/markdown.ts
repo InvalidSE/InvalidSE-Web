@@ -155,6 +155,37 @@ function getYoutubeEmbedUrl(url: string): string | null {
 	}
 }
 
+type MarkdownBlockType = 'heading' | 'lead-in' | 'other' | null;
+
+function renderHeading(level: number, text: string, previousBlockType: MarkdownBlockType): string {
+	const spacingStyle =
+		previousBlockType === null
+			? ' style="margin-bottom: 0.15rem; line-height: 1.15;"'
+			: previousBlockType === 'heading'
+				? ' style="margin-top: 1rem; margin-bottom: 0.15rem; line-height: 1.15;"'
+				: ' style="margin-top: 5rem; margin-bottom: 0.15rem; line-height: 1.15;"';
+
+	return `<h${level}${spacingStyle}>${renderInlineMarkdown(text.trim())}</h${level}>`;
+}
+
+function renderParagraph(text: string, previousBlockType: MarkdownBlockType): string {
+	const trimmedText = text.trim();
+	const spacingStyle =
+		previousBlockType === 'heading'
+			? trimmedText.endsWith(':')
+				? ' style="margin-top: 0; margin-bottom: 0.15rem;"'
+				: ' style="margin-top: 0;"'
+			: trimmedText.endsWith(':')
+				? ' style="margin-bottom: 0.15rem;"'
+				: '';
+
+	return `<p${spacingStyle}>${renderInlineMarkdown(text)}</p>`;
+}
+
+function getParagraphBlockType(text: string): Exclude<MarkdownBlockType, null> {
+	return text.trim().endsWith(':') ? 'lead-in' : 'other';
+}
+
 function renderInlineMarkdown(source: string): string {
 	const replacements: string[] = [];
 	let text = source;
@@ -210,15 +241,19 @@ function renderInlineMarkdown(source: string): string {
 	);
 }
 
-function renderList(lines: string[], ordered: boolean): string {
+function renderList(lines: string[], ordered: boolean, previousBlockType: MarkdownBlockType): string {
 	const tag = ordered ? 'ol' : 'ul';
 	const pattern = ordered ? /^\d+\.\s+(.*)$/ : /^[-*]\s+(.*)$/;
+	const listStyle =
+		previousBlockType === 'lead-in'
+			? ' style="margin-top: 0; margin-bottom: 1rem; padding-left: 1.25rem;"'
+			: ' style="margin-top: 0.5rem; margin-bottom: 1rem; padding-left: 1.25rem;"';
 	const items = lines
 		.map((line) => line.match(pattern)?.[1] ?? '')
-		.map((item) => `<li>${renderInlineMarkdown(item)}</li>`)
+		.map((item) => `<li style="margin: 0.15rem 0; padding-left: 0.2rem;">${renderInlineMarkdown(item)}</li>`)
 		.join('');
 
-	return `<${tag}>${items}</${tag}>`;
+	return `<${tag}${listStyle}>${items}</${tag}>`;
 }
 
 type GalleryOptions = {
@@ -333,6 +368,7 @@ export function renderMarkdown(source: string): string {
 
 	const lines = normalized.split('\n');
 	const blocks: string[] = [];
+	let previousBlockType: MarkdownBlockType = null;
 	let index = 0;
 
 	while (index < lines.length) {
@@ -346,13 +382,15 @@ export function renderMarkdown(source: string): string {
 		const headingMatch = line.match(/^(#{1,6})\s+(.*)$/);
 		if (headingMatch) {
 			const [, hashes, text] = headingMatch;
-			blocks.push(`<h${hashes.length}>${renderInlineMarkdown(text.trim())}</h${hashes.length}>`);
+			blocks.push(renderHeading(hashes.length, text, previousBlockType));
+			previousBlockType = 'heading';
 			index += 1;
 			continue;
 		}
 
 		if (/^(-{3,}|\*{3,}|_{3,})$/.test(line.trim())) {
 			blocks.push('<hr />');
+			previousBlockType = 'other';
 			index += 1;
 			continue;
 		}
@@ -374,6 +412,7 @@ export function renderMarkdown(source: string): string {
 			}
 
 			blocks.push(renderGallery(galleryLines, galleryOptions));
+			previousBlockType = 'other';
 			continue;
 		}
 
@@ -381,6 +420,7 @@ export function renderMarkdown(source: string): string {
 		if (youtubeMatch) {
 			const rawUrl = youtubeMatch[1].trim().replace(/\s+:::\s*$/, '');
 			blocks.push(renderYoutubeBlock(rawUrl));
+			previousBlockType = 'other';
 			index += 1;
 			continue;
 		}
@@ -388,12 +428,14 @@ export function renderMarkdown(source: string): string {
 		const media = parseMarkdownImage(line);
 		if (media && isPdfUrl(media.url)) {
 			blocks.push(renderPdfBlock(media.url, media.alt));
+			previousBlockType = 'other';
 			index += 1;
 			continue;
 		}
 
 		if (media) {
 			blocks.push(renderImageBlock(media.url, media.alt));
+			previousBlockType = 'other';
 			index += 1;
 			continue;
 		}
@@ -416,6 +458,7 @@ export function renderMarkdown(source: string): string {
 			blocks.push(
 				`<pre><code${languageClass}>${escapeHtml(codeLines.join('\n'))}</code></pre>`
 			);
+			previousBlockType = 'other';
 			continue;
 		}
 
@@ -428,6 +471,7 @@ export function renderMarkdown(source: string): string {
 			}
 
 			blocks.push(`<blockquote><p>${renderInlineMarkdown(quoteLines.join(' '))}</p></blockquote>`);
+			previousBlockType = 'other';
 			continue;
 		}
 
@@ -439,7 +483,8 @@ export function renderMarkdown(source: string): string {
 				index += 1;
 			}
 
-			blocks.push(renderList(listLines, false));
+			blocks.push(renderList(listLines, false, previousBlockType));
+			previousBlockType = 'other';
 			continue;
 		}
 
@@ -451,7 +496,8 @@ export function renderMarkdown(source: string): string {
 				index += 1;
 			}
 
-			blocks.push(renderList(listLines, true));
+			blocks.push(renderList(listLines, true, previousBlockType));
+			previousBlockType = 'other';
 			continue;
 		}
 
@@ -462,7 +508,9 @@ export function renderMarkdown(source: string): string {
 			index += 1;
 		}
 
-		blocks.push(`<p>${renderInlineMarkdown(paragraphLines.join(' '))}</p>`);
+		const paragraphText = paragraphLines.join(' ');
+		blocks.push(renderParagraph(paragraphText, previousBlockType));
+		previousBlockType = getParagraphBlockType(paragraphText);
 	}
 
 	return blocks.join('\n');
