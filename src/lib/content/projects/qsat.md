@@ -1,8 +1,8 @@
 ---
-title: "QSAT Film Camera"
+title: "QSat APSS"
 slug: "qsat"
 sortOrder: 5
-description: "We put a film camera into a rocket."
+description: "Fitting a pocket film camera into a rocket payload."
 tags:
   - "UoA/APSS"
   - "Hardware"
@@ -16,129 +16,245 @@ github: "https://github.com/questionable-innovations/QSAT_2024-2025"
 highlighted: true
 readMore: true
 collaborators:
-  - "Jasper M-W | https://jmw.nz" 
+  - "Jasper M-W | https://jmw.nz"
   - "Anton Bennett | https://www.linkedin.com/in/anton-bennett/"
   - "William Yang | https://www.linkedin.com/in/william-yang629/"
   - "Joel Mansor | https://www.linkedin.com/in/joel-mansor-bb7654223/"
 ---
-# We launched a film camera in a rocket in 2025.
 
-With modern electronics, advanced CAD, and the latest 3D printing technology, we managed to capture an entirely white film frame. This is the cool story of how we managed to capture perhaps the most boring photo possible.
+## We launched a film camera in a rocket in 2025.
+With modern electronics, advanced CAD, and the latest 3D printing technology, we managed to capture an entirely white film frame.
+This is the cool story of how we managed to capture perhaps the most boring photo possible.
 
-:::gallery 2 false
-![The resulting film strip - but how did we get here?](./projects/qsat/final-photo.jpg)
-:::
-
+![A pure white frame](./projects/qsat/final-photo.jpg)
 
 ## What is PSat?
-
-PSat, or "Pico Satellite", is a summer program run by the Auckland Program for Space Systems at the University of Auckland. The program is designed to give students hands-on experience in building and launching a small pico-satellite payload. The payload can be anything the students like, as long as it's self-contained and fits into the University's Sudden Rush I-class rockets.
+PSat, or "Pico Satellite", is a summer program run by the [Auckland Program for Space Systems (APSS)](https://apss.co.nz/) at the University of Auckland. The program is designed to give students hands-on experience in building and launching a small "pico-satellite" payload. The payload can be anything the students like, as long as it's self-contained, and fits into the University's [Sudden Rush](https://locprecision.com/products/sudden-rush) I class rockets.
 
 At the start of the program, many teams are formed. Those teams are filtered down through design reviews and checkpoints to a final few teams that get their payload launched at the end of the program. The design reviews are loosely based on a simpler version of NASA's mission lifecycle.
 
-Every team also had access to reference designs provided by the APSS team. These reference PCBs were designed to vertically stack and covered the basic functionality needed for a PSat. The reference designs included a battery power supply, an MSP430-based MCU board, and a beacon board with a LoRa radio, GPS, and buzzer.
+Every team also had access to reference designs, which were provided by the APSS team. These reference PCB's were designed to vertically stack, and covered the basic functionality needed for a PSat. The reference designs included a battery powersupply, a MSP430 based MCU board, and a beacon board with a LoRa radio, GPS, and a buzzer.
 
-This year, the teams were given the following theme:
+This year, the teams were provided with the following theme:
 
-> Create a superlative PSat. Your PSat must be the best at something. It can be the fastest, the most powerful, the most efficient, or the most fun.
+> Create a superlative PSat.
+> Your PSat must be the best at something. It can be the fastest, the most powerful, the most efficient, or the most fun.
 
 ## The concept
 
-To fit the theme, we chose "The Most Retro" as our superlative. We decided to build a payload that would take photos upon deployment using a commercial film camera. Alongside the film camera, we wanted to include a small digital camera and a sensor and communication module to send telemetry data back to the ground.
+To fit the theme, we selected "The Most Retro" as our superlative. We decided to build a payload that would take photos upon deployment using a commercial film camera. Alongside the film camera, we wanted to include a small digital camera, and a sensor/communication module to send telemetry data back to the ground.
 
-The payload had to fit into an extremely small volume, so we needed a tiny film camera to match. We settled on the Kodak Winner Pocket Camera, a small 110 film camera that was originally tied to the 1988 Olympic Games. The camera is small, light, and dead simple to operate. It has a fixed-focus lens, a fixed aperture, and a fixed shutter speed. The only thing we needed to automate was the shutter release and film advance.
+![Kodak Winner Pocket Camera](./projects/qsat/winner-camera-cutout.png)
 
-:::gallery 2 true
-![The Kodak Winner Pocket Camera we built around](./projects/qsat/winner-camera.jpg)
-![Dimensions of the camera, after modelling](./projects/qsat/airspace-layout.png)
-:::
+The payload must fit into a tiny space, around the [same size as a tin can](./projects/qsat/size-comparison.webp), so we needed a tiny film camera to match. We settled on the [Kodak Winner Pocket Camera](https://filmphotographyproject.com/kodak-winner-110-pocket-camera-review/), a small 110 film camera that was one of the [official sponsors of the 1988 Olympic Games](https://collectiblend.com/Cameras/Kodak-Eastman/Winner-Camera-(1988-Olympics).html). The camera is small, light, and dead-simple to operate. It has a fixed focus lens, a fixed aperture, and a fixed shutter speed. The only thing we needed to automate was the shutter release and film advance.
+
+#### Mission Definition Review
+
+Once we had our concept, we needed to present it to the APSS team for approval. It was a simple presentation, where we outlined our concept, the components we would use, and the timeline for the project. We also outlined the risks and challenges we would face, and how we would mitigate them. The presentation was well received, and we were given the green light to proceed with the project.
+
+![QSat MDR](./projects/qsat/qsat-mdr.pdf)
 
 ## First iteration
 
-Once we had the green light, we split the team in two and started designing the payload from both ends. The mechanical team worked on the payload structure while the electrical team worked on the main motherboard. We also started sourcing the components we would need.
+Once we had the green light, we split the team in two and started to design our payload. Both the mechanical team and the electrical team started to work on the first prototype from both ends, working towards the Preliminary Design Review deadline. The mechanical team started to design the payload structure, while the electrical team worked on the main Motherboard. We also started to source the components we would need for the project.
 
 ### Electrical
 
-Despite the very analog nature of the film camera, we still needed a full electrical subsystem to act as our flight computer. Not only did it need to detect and trigger the film camera at apogee, we also aimed to dynamically advance the film frame, trigger a digital camera to capture matching shots, and even broadcast flight information over a LoRa radio.
+Despite the very analog nature of the film camera, we needed a full electrical subsystem to act as our flight computer. Not only did it need to detect and trigger the film camera at apogee; we also aimed to dynamically advance the film frame, trigger a digital camera to capture matching shots, and even broadcast flight information over a LoRa radio. Ambitious plans indeed.
 
-Because of the tight mechanical constraints, we had very limited space for the onboard flight system. Unlike most other teams, we could not simply extend the example PCB designs vertically because that would consume the exact space we needed for the camera itself. To make more space, we instead chose a long motherboard-style layout.
+![System Layout](./projects/qsat/system-layout.svg)
 
-To start, we merged the MCU and beacon example PCBs into a single schematic and began work in Altium. We had a heap of features to integrate.
+Due to the mechanical constraints below, we had super limited space for the onboard flight system. Unlike most other teams, we couldn't just design an extension to the example PCB designs, as they were designed to stack, using up our precious vertical space within our PSAT. To make more space for the camera itself, we decided on a long motherboard like design.
+
+To start, we merged the MCU & Beacon example PCB's into one schematic, and began work in Altium. We had a heap of features to integrate.
 
 ### Motor control system
+Unfortunately our film camera was designed for humans to operate, not robots. The trigger was simple to operate, a basic push-button mechanism the fired the fixed shutter. The film advance mechanism, on the other hand, was another beast. To advance each frame, you had to slide the flat lever back and forth until it physically locked in place. Sometimes this required just one slide, other times you needed to work it back and forth three times for a single shot.
 
-Our film camera was designed for humans to operate, not robots. The trigger was simple: a basic push-button mechanism that fired the fixed shutter. The film advance mechanism was far trickier. To advance each frame, you had to slide the flat lever back and forth until it physically locked in place. Sometimes this required a single slide, and other times it needed to be worked back and forth multiple times for a single shot.
+While this tactile feedback system works perfectly for a human who can see and feel the mechanism, it posed a significant challenge for our robotic system that had to determine the correct position purely through mechanical feedback.
 
-That tactile feedback works perfectly for a human who can see and feel the mechanism, but it posed a significant challenge for a robotic system that had to determine the correct position purely through mechanical feedback.
+![Film Camera Shutter Button](./projects/qsat/shutter-button.png)
 
-To keep things as simple as possible, we chose a servo for the shutter trigger and a current-sensed motor arrangement for the film advance. The idea was that the motor current would spike when the mechanism stalled, letting us detect the jam states from a single sensor.
+![Film Advance Slider](./projects/qsat/shutter-slider.png)
 
-We used an SG90 servo for the shutter and modified another to act as a geared-down DC motor for the film advance. To sense current, we designed a small op-amp based measurement circuit. If it failed, we would still have the next iteration to fix it. That turned out to be some excellent foreshadowing.
+In a bid to keep things as simple as possible, we decide to use a servo for the shutter trigger, and a current sense motor combo for the film advance. The current going through the motor will peak when the motor stalls, we can *theoretically* find our three jam states from a single sensor.
+
+![Venn Diagram](./projects/qsat/motor-venn-diagram.svg)
+
+For implementing, we decided on using an SG-90 servo for both the trigger and film advance, simply modding the latter to turn it into a geared down DC motor. To sense the current, we just needed a nice little bit of first-year opamp analysis to calculate a circuit to measure current.
+
+After all, if it didn't work, we always had the next iteration to get it right. This is what we call foreshadowing.
 
 ### Mechanical
+**Constraints:** 
+- The payload must fit within the I class rocket. 
+- The airspace that can house the payload has a maximum height of 125 mm and a maximum width/diameter of 74 mm. 
+- This airspace must also have room to hold the parachute when it's not being deployed. 
+- The payload must also eject out from the rocket freely after reaching apogee. 
+- The payload must also be able to open and close, so we can access the electronics inside. Relative to the total space available, the film camera was massive, at 115 mm x 55 mm x 26 mm.
 
-The payload had to fit inside the I-class rocket with a maximum payload height of 125 mm and a maximum width of 74 mm. It also needed to leave room for the parachute, eject cleanly at apogee, and open up so we could access the electronics inside. Relative to the total volume available, the film camera was massive.
+We used the camera as the core of our payload, and designed around it in the remaining space. Two 3D printed shells would bolt on either side of the camera, each holding their respective half of the components. On one side of the camera, we placed the battery with the film advance servo, and the other housed our long custom PCB with the trigger pushing servo.
 
-We used the camera as the core of the payload and designed around it in the remaining space. Two 3D printed shells bolted onto either side of the camera, each holding its own half of the components. On one side we placed the battery and film advance servo, and on the other we housed the long custom PCB with the trigger servo.
+![My CAD model, marked up](./projects/qsat/airspace-layout.png)
 
-Because we maximised the rocket tube's airspace, we had to get creative about attaching the parachute. We did not have enough space for a conventional top or bottom mounting point, so we mounted the parachute through the side of the payload using an internal channel for the strap.
+As a result of us maximising the rocket tube's airspace, we had to come up with an idea on how we could attach the parachute to our payload. Since we weren't able to attach a mount on the top or bottom end of our payload, we decided to mount our parachute on the side of the payload, not through an external mount. We had enough space inside the payload that we could make a small channel that allowed us to feed the parachute strap through.
+
+![Rope channel](./projects/qsat/parachute-channel.jpg)
 
 #### Version 0
-
-Version 0 was our initial proof of concept to make sure the film camera could physically fit inside the allocated payload size. We 3D printed a cylinder with the camera's volume cut out of the inside. This gave the whole team a better feel for how much surrounding space we actually had to work with.
+'Version 0' was our initial proof-of-concept to make sure our film camera could fit inside our allocated payload size. We 3D printed a cylinder with the area for the camera cut out of the inside. The benefits of doing this allowed the whole team to get an idea of area around the camera we have to work with, and with the CAD model we could start allocating space for different elements.
 
 #### Version 1
+![Version 1 Open](./projects/qsat/version-one/version-1-open.jpg)
 
-With version 1 we began exploring the size and placement of elements. We knew roughly what components were going into the payload, so we could cut out space for them and test whether the internal structure would still hold with so much material removed. We also started exploring how the payload could open and close while retaining its cylindrical form.
+With version 1 we began exploring size and placement of elements. We knew roughly what elements were going into the payload, so we were able to cut out the space for them. This allowed us to explore whether the internal structure would hold with so much material cut out. This included performing drop tests and general structural tests.
+Another element that was explored was how we can open & close the payload. This problem is nontrivial as the payload must retain its outer cylindrical form, and a top cap could not be used as the internal structure of the payload could not all be accessed. So the idea for a clamshell mechanism was tested. The payload shell was split vertically, with holes to allow 4 bolts to hold the shell together. Another benefit of this design was, with the camera removed, all internal electronics were easily accessible to run wires.
 
 #### Version 2
 
-In version 2, the airspace around the servos was expanded to improve fit, extra space was made at the base for the PSU board, and cutouts were added for both the film camera lens and the ESP32-CAM lens. Even then, the servo spaces were still too tight, and we ended up making temporary scalpel modifications to remove some of the supporting walls.
-
-:::gallery 2 true
-![Fit check of the payload integrated with the rocket sections](./projects/qsat/fit-check-1.jpg)
+![Fit Check 2](./projects/qsat/fit-check-1.jpg)
+:::gallery 4 transparent
+![](./projects/qsat/version-two/v2-1.jpg)
+![](./projects/qsat/version-two/v2-2.jpg)
+![](./projects/qsat/version-two/v2-3.jpg)
+![](./projects/qsat/version-two/v2-4.jpg)
 :::
 
-#### Version 3 and beyond
+Airspace surrounding the space where the servos would go were expanded for allowing a better fit of the the servos.
+Airspace created at the base of the interior of the shell to allow for placement of the PSU board.
+Cutouts were made in front of the location where the film camera lens were going to look out from. Cutout also made for the ESP-32 Cam lens to look out through.
 
-Later mechanical versions mainly focused on increasing internal clearances and adapting to the reality of our electronics. One week before launch day, our custom PCB died, which forced a major scope-down. We rebuilt the internals around a single ESP32-S2 and a collection of smaller modules wired together far more manually than originally planned.
+After attempting to place the servos into their dedicated spot, the airspaces were found to still be too tight. Modifications were temporarily made by removing some of the supporting walls inside using a scalpel.
 
-## Third iteration
+#### Version 3 & 4
 
-### The rebuild
+Version 3 and 4 were 3D printed with larger airspaces for the servos.
 
-By this point we were only four days from launch and no longer had a working controller. This is where our hackathon instincts kicked in.
-
-We split the recovery plan into three sequential scopes:
-
-1. Wait until the payload was ejected into bright sunlight, then push the trigger on the film camera.
-2. Add a digital camera and power management so the ESP32-CAM could boot and save as many photos as possible to the SD card.
-3. Add remote arming, so we would not accidentally waste our single film shot before launch.
-
-This is why we chose an ESP32 as the core MCU in the first place. It let us communicate over ESP-NOW using the built-in radio, which made it practical to throw together a remote using a Cheap Yellow Display we already had on hand.
-
-When we say rebuild, we mean rebuild. We went back to basics and got the minimum viable version running first. In the end, we managed to get all three priorities working in time.
-
-:::gallery 2 true
-![Last-minute bench work during the rebuild](./projects/qsat/launch.png)
-![The improvised remote arming controller](./projects/qsat/remote.png)
+:::gallery 3 transparent
+![V3 Closed](./projects/qsat/version-3-closed.jpg)
+![V4 Out Of The Printer](./projects/qsat/version-four/out-of-the-printer.jpg)
 :::
 
-## Launch day
+#### Version 4.5
+Due to the sudden demise of our custom PCB one week before launch day, we had to scope-down our setup to use a single [ESP32 S2](https://www.wemos.cc/en/latest/s2/s2_mini.html) as the core. This meant we had to change interiors of the shell that was designed to house the custom PCB, to now house a series of individual modules jankily wired together.
 
-Launch day was exactly the kind of chaotic payoff we had been working toward. The payload flew, ejected, triggered, and came back down with both the film and digital systems having actually done something useful.
+#### Preliminary Design Review
+
+The first design review was held on the 1st of December 2024. We presented our concept to the APSS team and received valuable feedback.
+
+![QSat PDR](./projects/qsat/qsat-pdr.pdf)
+
+## Second Iteration
+
+### Critical Design Review
+
+![QSat CDR](./projects/qsat/qsat-cdr.pdf)
+
+
+## Third Iteration - The Rebuild
+
+So... we don't have a controller, as the PCB died. We're supposed to **launch in four days**. This is where our Hackathon experience came in handy.
+
+We split our goals into three sequential scopes:
+
+![Redesign Diagram](./projects/qsat/rebuild-plan.svg)
+
+Priority one was simple. It would simply wait until the payload was ejected into the bright sunlight, then push down the trigger on the film camera. This was the MVP that if functional in time, would make it worth the time to launch the payload.
+
+The next scope, priority two, added a digital camera and power management to the design. Upon ejection from the rocket body, it would enable the 5V rail on the power supply. This would both enable the Servo, and power up the ESP-CAM. The ESP-CAM would take as many photos as possible on boot, and save to the included SD card.
+
+Finally, as our stretch goal in priority three, we wanted remote arming. As we only had a single shot, the worst case scenario was our payload activating prematurely and wasting the film. If we're constantly looking for light, we would have to arm the payload, and assembly the rocket without any light leaking into the payload.
+
+This is why we choose an ESP32 as the core MCU at the start, as this enabled us to easily communicate over [ESP-NOW](https://www.espressif.com/en/solutions/low-power-solutions/esp-now) using the built in antenna. Along with a [Cheap-Yellow-Display](https://github.com/witnessmenow/ESP32-Cheap-Yellow-Display?tab=readme-ov-file#esp32-cheap-yellow-display) on hand.
+
+When we say rebuild, we meant it. We went back to basics, getting Priority One underway immediately.
+
+*Spoilers: We managed to get all of these working, and the remote looks amazing. Take a look:*
+
+:::gallery 3
+![The controller](./projects/qsat/remote.png)
+![The controller](./projects/qsat/rebuild-bench.jpg)
+:::
+
+## Launch Day
+:::gallery 3
+![Launch Day](./projects/qsat/launch-day/20250309_133810.jpg)
+![Launch Day](./projects/qsat/launch-day/DSC09256.jpg)
+![Launch Day](./projects/qsat/launch-day/DSC09264.jpg)
+![Launch Day](./projects/qsat/launch-day/DSC09277.jpg)
+![Launch Day](./projects/qsat/launch-day/DSC09280.jpg)
+![Launch Day](./projects/qsat/launch-day/DSC09314.jpg)
+![Launch Day](./projects/qsat/launch-day/DSC09319.jpg)
+![Launch Day](./projects/qsat/launch-day/DSC09320.jpg)
+![Launch Day](./projects/qsat/launch-day/DSC09325.jpg)
+![Launch Day](./projects/qsat/launch-day/DSC09351.jpg)
+![Launch Day](./projects/qsat/launch-day/DSC09405.jpg)
+![Launch Day](./projects/qsat/launch-day/DSC09423.jpg)
+![Launch Day](./projects/qsat/launch-day/DSC09439.jpg)
+![Launch Day](./projects/qsat/launch-day/DSC09445.jpg)
+![Launch Day](./projects/qsat/launch-day/DSC09446.jpg)
+![Launch Day](./projects/qsat/launch-day/DSC09448.jpg)
+![Launch Day](./projects/qsat/launch-day/DSC09455.jpg)
+![Launch Day](./projects/qsat/launch-day/DSC09459.jpg)
+![Launch Day](./projects/qsat/launch-day/DSC09461.jpg)
+![Launch Day](./projects/qsat/launch-day/DSC09464.jpg)
+![Launch Day](./projects/qsat/launch-day/DSC09467.jpg)
+![Launch Day](./projects/qsat/launch-day/DSC09468.jpg)
+![Launch Day](./projects/qsat/launch-day/DSC09473.jpg)
+![Launch Day](./projects/qsat/launch-day/DSC09475.jpg)
+![Launch Day](./projects/qsat/launch-day/DSC09479.jpg)
+![Launch Day](./projects/qsat/launch-day/DSC09522.jpg)
+![Launch Day](./projects/qsat/launch-day/DSC09526.jpg)
+![Launch Day](./projects/qsat/launch-day/DSC09528.jpg)
+![Launch Day](./projects/qsat/launch-day/DSC09529.jpg)
+![Launch Day](./projects/qsat/launch-day/DSC09532.jpg)
+![Launch Day](./projects/qsat/launch-day/DSC09535.jpg)
+:::
 
 ## Recovery
-
-After recovery, we were finally able to inspect the payload and see what had happened in the air. That was the moment of truth for whether the film mechanism had actually survived flight and whether the cameras had captured anything meaningful.
+:::gallery 3
+![Recovery](./projects/qsat/recovery/20250309_141129.jpg)
+![Recovery](./projects/qsat/recovery/20250309_141212.jpg)
+![Recovery](./projects/qsat/recovery/IMG_5434.JPG)
+![Recovery](./projects/qsat/recovery/PXL_20250309_140426888.jpg)
+![Recovery](./projects/qsat/recovery/PXL_20250309_140432760.jpg)
+![Recovery](./projects/qsat/recovery/PXL_20250309_140811017.jpg)
+:::
 
 ## Photos captured
-
-The digital camera did capture images, and the film camera definitely fired, but the headline result was still gloriously underwhelming: the film frame came back almost entirely white.
-
-That was somehow both disappointing and perfect. After all that design work, electrical drama, last-minute rebuilding, and launch-day tension, we had successfully launched a retro film camera in a rocket and captured perhaps the least informative photo possible.
-
-:::gallery 2 true
-![One of the digital images captured in flight](./projects/qsat/onboard-camera-1.jpg)
-![The final film scan with the washed-out frame in the middle](./projects/qsat/final-photo.jpg)
+:::gallery 3
+![Onboard camera](./projects/qsat/onboard-camera/picture106.jpg)
+![Onboard camera](./projects/qsat/onboard-camera/picture107.jpg)
+![Onboard camera](./projects/qsat/onboard-camera/picture108.jpg)
+![Onboard camera](./projects/qsat/onboard-camera/picture109.jpg)
+![Onboard camera](./projects/qsat/onboard-camera/picture110.jpg)
+![Onboard camera](./projects/qsat/onboard-camera/picture111.jpg)
+![Onboard camera](./projects/qsat/onboard-camera/picture112.jpg)
+![Onboard camera](./projects/qsat/onboard-camera/picture113.jpg)
+![Onboard camera](./projects/qsat/onboard-camera/picture114.jpg)
+![Onboard camera](./projects/qsat/onboard-camera/picture115.jpg)
+![Onboard camera](./projects/qsat/onboard-camera/picture116.jpg)
+![Onboard camera](./projects/qsat/onboard-camera/picture117.jpg)
+![Onboard camera](./projects/qsat/onboard-camera/picture118.jpg)
+![Onboard camera](./projects/qsat/onboard-camera/picture119.jpg)
+![Onboard camera](./projects/qsat/onboard-camera/picture120.jpg)
+![Onboard camera](./projects/qsat/onboard-camera/picture121.jpg)
+![Onboard camera](./projects/qsat/onboard-camera/picture122.jpg)
+![Onboard camera](./projects/qsat/onboard-camera/picture123.jpg)
+![Onboard camera](./projects/qsat/onboard-camera/picture124.jpg)
+![Onboard camera](./projects/qsat/onboard-camera/picture125.jpg)
+![Onboard camera](./projects/qsat/onboard-camera/picture126.jpg)
+![Onboard camera](./projects/qsat/onboard-camera/picture127.jpg)
+![Onboard camera](./projects/qsat/onboard-camera/picture128.jpg)
 :::
+
+## High Speed Footage
+Here's the first non blank photo (first), along with the satellite imagery of the location (second), so you can see the rotation speed for yourself.
+
+:::gallery 3 transparent
+![First Non-Blank Photo](./projects/qsat/compare-satellite/picture106.jpg)
+![Satellite View](./projects/qsat/compare-satellite/satellite-view.png)
+:::
+
+### Conclusion, and a note from me
+This project writeup was a collaborative effort initially written for Jasper's website! His markdown processor is much fancier. Go check it out [here](https://jmw.nz/projects/QSatFilmCamera)!

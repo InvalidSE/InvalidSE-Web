@@ -24,12 +24,12 @@
             </span>
         </div>
         <!-- <UnderConstruction /> -->
-        <div class="flex flex-col sm:flex-row lg:flex-row gap-2 items-center">
+        <div class="flex flex-row flex-wrap gap-2 items-center">
             <!-- <a href="#about" class="btn btn-outline text-xl">About</a> -->
-            <a href="/projects" class="btn btn-outline text-xl">Projects</a>
+            <a href="/projects" class="btn btn-outline text-base sm:text-xl">Projects</a>
             <a
                 href="/photos"
-                class="btn btn-outline text-xl"
+                class="btn btn-outline text-base sm:text-xl"
             >
                 Photography
             </a>

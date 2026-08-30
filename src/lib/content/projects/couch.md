@@ -55,7 +55,7 @@ In collaboration with the University of Auckland's [Maker Club](https://makeuoa.
 
 ## Gallery
 
-:::gallery 3 false
+:::gallery 3
 ![The couch out for a test drive](./projects/couch/driving.jpg)
 ![TODO: add caption](./projects/couch/DSC08281.JPG)
 ![TODO: add caption](./projects/couch/DSC08283.JPG)

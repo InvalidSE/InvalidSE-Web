@@ -45,13 +45,13 @@
 			<img
 				src={project.image}
 				alt={project.title}
-				class="w-full max-h-[32rem] object-cover"
+				class="absolute inset-0 h-full w-full object-cover"
 			/>
 			<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent" />
-			<div class="absolute inset-x-0 bottom-0 p-6 md:p-10">
+			<div class="relative z-10 flex min-h-[28rem] items-end p-5 sm:min-h-[30rem] sm:p-6 md:min-h-[32rem] md:p-10">
 				<div class="flex flex-col gap-3 text-white">
-					<h1 class="text-4xl md:text-6xl font-bold">{project.title}</h1>
-					<p class="text-lg md:text-2xl text-white/85">{project.description}</p>
+					<h1 class="text-3xl font-bold sm:text-4xl md:text-6xl">{project.title}</h1>
+					<p class="text-base text-white/85 sm:text-lg md:text-2xl">{project.description}</p>
 					<div class="flex flex-wrap gap-2">
 						{#each project.tags as tag}
 							<div class="badge badge-outline border-white/60 text-white">{tag}</div>
