@@ -9,7 +9,7 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
-		"build:cf": "npm install -g pnpm && pnpm install && pnpm run build",
+		"build:cf": "npm run build",
 		"compress": "node scripts/compress-photography.mjs",
 		"photos:metadata": "node scripts/update-photography-metadata.mjs",
 		"preview": "vite preview",
