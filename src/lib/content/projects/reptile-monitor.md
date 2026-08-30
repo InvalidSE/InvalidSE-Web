@@ -7,6 +7,7 @@ tags:
   - "IoT"
   - "Python"
   - "Science Fair"
+collaborators:
 image: "./projects/reptilemonitor/reptilemonitor.webp"
 link: ""
 externalLink: ""

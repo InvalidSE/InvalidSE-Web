@@ -7,6 +7,7 @@ tags:
   - "Unity"
   - "Hardware"
   - "Firmware"
+collaborators:
 image: "./projects/tens/tens.webp"
 link: ""
 externalLink: ""

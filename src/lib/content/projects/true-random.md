@@ -7,6 +7,7 @@ tags:
   - "TerribleHack"
   - "Full-Stack"
   - "Hardware"
+collaborators:
 image: "./projects/truerandom/truerandom.webp"
 link: ""
 externalLink: "https://tr.host.qrl.nz/"

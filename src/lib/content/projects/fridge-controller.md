@@ -6,6 +6,7 @@ description: "A temperature controller for an industrial refrigerator."
 tags:
   - "Electrical"
   - "Firmware"
+collaborators:
 image: "./placeholders/1.webp"
 link: ""
 externalLink: ""

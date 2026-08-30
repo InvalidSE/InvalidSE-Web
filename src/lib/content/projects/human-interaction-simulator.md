@@ -6,6 +6,7 @@ description: "Human interaction, via a recursive Cloudflare workers function. Bu
 tags:
   - "Cloudflare Workers"
   - "Hackathons"
+collaborators:
 image: "./projects/humaninteractionsimulator/humaninteractionsimulator.webp"
 link: ""
 externalLink: ""

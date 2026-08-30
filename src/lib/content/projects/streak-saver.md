@@ -6,6 +6,7 @@ description: "A tool to help me keep my duolingo streak when I was on holiday."
 tags:
   - "Selenium"
   - "Python"
+collaborators:
 image: "./placeholders/1.webp"
 link: ""
 externalLink: ""

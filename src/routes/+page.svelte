@@ -111,30 +111,55 @@
                 <div class="grid gap-4 md:grid-cols-2">
                     <a
                         href="mailto:taine@reader.nz"
-                        class="rounded-2xl border border-base-content/20 bg-base-100/80 p-5 shadow-sm transition duration-200 hover:-translate-y-1 hover:border-primary hover:shadow-xl"
+                        class="btn btn-outline group h-auto min-h-0 justify-start p-5 normal-case"
                     >
-                        <div class="text-sm uppercase tracking-[0.2em]">Email</div>
-                        <div class="mt-2 font-semibold text-base-content">taine@reader.nz</div>
+                        <div class="text-left">
+                            <div class="text-sm uppercase tracking-[0.2em]">Email</div>
+                            <div class="mt-2 text-xl font-semibold text-base-content transition-colors group-hover:text-white md:text-2xl">
+                                taine@reader.nz
+                            </div>
+                        </div>
                     </a>
 
                     <a
                         href="https://www.linkedin.com/in/taine-reader/"
-                        class="rounded-2xl border border-base-content/20 bg-base-100/80 p-5 shadow-sm transition duration-200 hover:-translate-y-1 hover:border-primary hover:shadow-xl"
+                        class="btn btn-outline group h-auto min-h-0 justify-start p-5 normal-case"
                         target="_blank"
                         rel="noreferrer"
                     >
-                        <div class="text-sm uppercase tracking-[0.2em]">LinkedIn</div>
-                        <div class="mt-2 font-semibold text-base-content">/in/taine-reader</div>
+                        <div class="text-left">
+                            <div class="text-sm uppercase tracking-[0.2em]">LinkedIn</div>
+                            <div class="mt-2 text-xl font-semibold text-base-content transition-colors group-hover:text-white md:text-2xl">
+                                /in/taine-reader
+                            </div>
+                        </div>
                     </a>
 
                     <a
                         href="https://github.com/invalidse"
-                        class="rounded-2xl border border-base-content/20 bg-base-100/80 p-5 shadow-sm transition duration-200 hover:-translate-y-1 hover:border-primary hover:shadow-xl"
+                        class="btn btn-outline group h-auto min-h-0 justify-start p-5 normal-case"
                         target="_blank"
                         rel="noreferrer"
                     >
-                        <div class="text-sm uppercase tracking-[0.2em]">GitHub</div>
-                        <div class="mt-2 font-semibold text-base-content">@InvalidSE</div>
+                        <div class="text-left">
+                            <div class="text-sm uppercase tracking-[0.2em]">GitHub</div>
+                            <div class="mt-2 text-xl font-semibold text-base-content transition-colors group-hover:text-white md:text-2xl">
+                                @InvalidSE
+                            </div>
+                        </div>
+                    </a>
+                    <a
+                        href="mailto:taine.reader@gmail.com"
+                        class="btn btn-outline group h-auto min-h-0 justify-start p-5 normal-case"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <div class="text-left">
+                            <div class="text-sm uppercase tracking-[0.2em]">If Cloudflare doesn't like your DNS records</div>
+                            <div class="mt-2 text-xl font-semibold text-base-content transition-colors group-hover:text-white md:text-2xl">
+                                taine.reader@gmail.com
+                            </div>
+                        </div>
                     </a>
                 </div>
             </div>

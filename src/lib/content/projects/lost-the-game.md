@@ -6,6 +6,7 @@ description: "An attempt at making a multiplayer game in 48 hours."
 tags:
   - "KiwiJam"
   - "Unity"
+collaborators:
 image: "./projects/lost/lost.png"
 link: ""
 externalLink: "https://invalidse.itch.io/lost-the-game"

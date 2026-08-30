@@ -8,6 +8,7 @@ tags:
   - "Full-Stack"
   - "Firmware"
   - "Electrical"
+collaborators:
 image: "./projects/energymonitor/energymonitor.webp"
 link: ""
 externalLink: "https://jmw.nz/projects/CompSys209"

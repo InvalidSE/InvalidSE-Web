@@ -7,6 +7,7 @@ tags:
   - "Hardware"
   - "Firmware"
   - "TerribleHack"
+collaborators:
 image: "./projects/taserchess/taserchess.webp"
 link: ""
 externalLink: ""

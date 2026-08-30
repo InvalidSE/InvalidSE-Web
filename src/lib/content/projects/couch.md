@@ -7,6 +7,7 @@ tags:
   - "TerribleHack"
   - "Physical"
   - "Electrical"
+collaborators:
 image: "./projects/couch/driving.jpg"
 link: "/projects/couch"
 video: "https://www.youtube.com/watch?v=XmJU1ODA8ZE"

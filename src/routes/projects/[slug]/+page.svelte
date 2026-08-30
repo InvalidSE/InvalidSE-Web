@@ -57,6 +57,31 @@
 							<div class="badge badge-outline border-white/60 text-white">{tag}</div>
 						{/each}
 					</div>
+						{#if project.collaborators.length > 0}
+							<div class="mt-2 flex flex-col gap-2">
+							<p class="text-sm font-semibold uppercase tracking-[0.24em] text-white/70">
+								Collaborators
+							</p>
+							<div class="flex flex-wrap gap-2">
+								{#each project.collaborators as collaborator}
+									{#if collaborator.link}
+										<a
+											href={collaborator.link}
+											target="_blank"
+											rel="noreferrer"
+											class="btn btn-sm btn-outline border-white/50 text-white hover:border-white hover:bg-white hover:text-base-content"
+										>
+											{collaborator.name}
+										</a>
+									{:else}
+										<div class="badge badge-outline border-white/60 px-4 py-3 text-white">
+											{collaborator.name}
+										</div>
+									{/if}
+								{/each}
+							</div>
+						</div>
+					{/if}
 				</div>
 			</div>
 		</div>
@@ -98,6 +123,27 @@
 						<path d="M9 18c-4.5 2-5-2-7-2" />
 					</svg>
 					GitHub
+				</a>
+			{/if}
+			{#if project.photoAlbum}
+				<a href={project.photoAlbum} target="_blank" rel="noreferrer" class="btn btn-outline gap-2">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="18"
+						height="18"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						aria-hidden="true"
+					>
+						<rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+						<circle cx="9" cy="9" r="2" />
+						<path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21" />
+					</svg>
+					Photo Album
 				</a>
 			{/if}
 			{#if project.externalLink}

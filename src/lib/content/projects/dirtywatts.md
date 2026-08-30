@@ -7,6 +7,7 @@ tags:
   - "GovHack"
   - "Full-Stack"
   - "Embedded"
+collaborators:
 image: "./projects/dirtywatts/awards2.jpg"
 link: ""
 externalLink: "https://dirtywatts.nz/"

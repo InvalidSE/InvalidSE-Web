@@ -2,9 +2,11 @@ interface ProjectFrontmatter {
 	title: string;
 	description: string;
 	tags: string[];
+	collaborators?: string[];
 	image: string;
 	link?: string;
 	externalLink?: string;
+	photoAlbum?: string;
 	video?: string;
 	embedVideo?: boolean;
 	github?: string;
@@ -14,13 +16,20 @@ interface ProjectFrontmatter {
 	sortOrder?: number;
 }
 
+export interface ProjectCollaborator {
+	name: string;
+	link?: string;
+}
+
 export interface Project {
 	title: string;
 	description: string;
 	tags: string[];
+	collaborators: ProjectCollaborator[];
 	image: string;
 	link: string;
 	externalLink?: string;
+	photoAlbum?: string;
 	video?: string;
 	embedVideo: boolean;
 	github?: string;
@@ -83,6 +92,20 @@ function parseScalar(value: string): FrontmatterValue {
 	}
 
 	return value;
+}
+
+function normalizeCollaborators(collaborators: string[] = []): ProjectCollaborator[] {
+	return collaborators
+		.map<ProjectCollaborator | null>((entry) => {
+			const [name, link] = entry.split('|').map((part) => part.trim());
+
+			if (!name) {
+				return null;
+			}
+
+			return link ? { name, link } : { name };
+		})
+		.filter((collaborator): collaborator is ProjectCollaborator => collaborator !== null);
 }
 
 function parseFrontmatter(source: string): { data: Record<string, FrontmatterValue>; body: string } {
@@ -148,9 +171,11 @@ function normalizeProject(path: string, source: string): Project {
 		title: frontmatter.title,
 		description: frontmatter.description,
 		tags: frontmatter.tags,
+		collaborators: normalizeCollaborators(frontmatter.collaborators),
 		image: normalizeAssetPath(frontmatter.image),
 		link: readMore ? `/projects/${slug}` : originalLink,
 		externalLink: frontmatter.externalLink ?? '',
+		photoAlbum: frontmatter.photoAlbum ?? '',
 		video: frontmatter.video ?? '',
 		embedVideo: frontmatter.embedVideo ?? true,
 		github: frontmatter.github ?? '',

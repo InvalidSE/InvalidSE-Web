@@ -7,6 +7,7 @@ tags:
   - "Grapple23"
   - "Full-Stack"
   - "Hardware"
+collaborators:
 image: "./projects/signalquo/alertrunning.webp"
 link: ""
 externalLink: "https://signalquo.qrl.nz/about"

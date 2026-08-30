@@ -6,6 +6,7 @@ description: "A recreation of Stereo Madness from scratch on an FPGA, using VHDL
 tags:
   - "VHDL"
   - "FPGA"
+collaborators:
 image: "./projects/fpga-geometry-dash/on-tv.jpg"
 link: ""
 externalLink: ""

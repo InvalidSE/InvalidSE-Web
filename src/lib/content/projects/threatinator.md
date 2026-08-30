@@ -5,6 +5,7 @@ sortOrder: 10
 description: "DTaaS - Death Threats as a Service - are you tired of manually cutting out letters from newspapers to make your death threats? Let the Threatinator do it for you! Made for a hackathon."
 tags:
   - "Hardware"
+collaborators:
 image: "./projects/threatinator/threatinator.webp"
 link: ""
 externalLink: ""

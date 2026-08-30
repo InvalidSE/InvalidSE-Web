@@ -6,6 +6,7 @@ description: "A smart COVID-19 places of interest map, made in 2021."
 tags:
   - "Frontend"
   - "GovHack"
+collaborators:
 image: "./projects/toi/toi.webp"
 link: ""
 externalLink: "https://toi.qrl.nz/"

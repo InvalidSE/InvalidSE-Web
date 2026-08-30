@@ -6,6 +6,7 @@ description: "Letting the internet draw on my keyboard LEDs. Work in progress! I
 tags:
   - "WIP"
   - "Full-Stack"
+collaborators:
 image: "./projects/keyboardart/keyboard.png"
 link: ""
 externalLink: ""

@@ -7,6 +7,7 @@ tags:
   - "Physical"
   - "Hardware"
   - "Firmware"
+collaborators:
 image: "./projects/arcade-chess/arcade-chess.jpg"
 link: ""
 externalLink: ""

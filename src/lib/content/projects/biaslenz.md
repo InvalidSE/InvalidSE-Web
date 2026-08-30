@@ -7,6 +7,7 @@ tags:
   - "GovHack"
   - "Frontend"
   - "Python"
+collaborators:
 image: "./projects/biaslenz/biaslenz.webp"
 link: ""
 externalLink: "https://biaslenz.qrl.nz/"

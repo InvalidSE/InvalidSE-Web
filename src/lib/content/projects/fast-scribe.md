@@ -6,6 +6,7 @@ description: "A multiplayer typing test game built in 48h. One person reads alou
 tags:
   - "KiwiJam"
   - "Full-Stack"
+collaborators:
 image: "./projects/fastscribe/fastscribe.png"
 link: ""
 externalLink: "https://scribe.qinnovate.nz/"

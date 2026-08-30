@@ -7,6 +7,7 @@ tags:
   - "CV"
   - "Full-Stack"
   - "Hardware"
+collaborators:
 image: "./projects/grinreaper/grinreaper.webp"
 link: ""
 externalLink: ""
