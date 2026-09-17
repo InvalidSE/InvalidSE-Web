@@ -84,6 +84,33 @@
     </section> 
 
     <div class="spacer my-20" />
+
+    <section class="content flex flex-col gap-5 items-center">
+        <section class="projects w-full max-w-6xl">
+            <div class="grid items-center gap-8 rounded-box border border-black bg-base-200/60 px-8 py-8 text-lg md:px-10 md:py-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(20rem,0.8fr)] lg:px-14 lg:py-14 lg:text-2xl">
+                <div class="flex max-w-3xl flex-col gap-6">
+                    <span class="text-4xl font-bold md:text-[2.7rem]">Draw me a picture!</span>
+                    <p class="leading-relaxed">
+                        I recently built a little desktop status display using an E-ink screen and some old analog current meters. It displays my CPU and RAM usage, as well as an image or my current Spotify song. You can draw or upload a photo to it below!
+                    </p>
+                    <div>
+                        <a href="/dashboard" class="btn btn-outline text-xl">Draw me a picture!</a>
+                    </div>
+                </div>
+                <div class="justify-self-center lg:justify-self-end">
+                    <img
+                        src="./projects/dashboard/dashboard.png"
+                        class="h-auto w-full max-w-lg rounded-2xl object-cover"
+                        alt="Dashboard"
+                    />
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+    <div class="spacer my-20" />
+
     <section class="content flex flex-col gap-5">
         <section class="projects">
             <span class="text-5xl font-bold">Highlighted Projects</span>
